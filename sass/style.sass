@@ -1,0 +1,1068 @@
+@import url(fonts.css)
+
+@keyframes slide-on 
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes slide-off 
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+
+@keyframes move-light
+    from
+        transform: translateX(-12em) skew(-45deg) 
+    to
+        transform: translateX(26em) skew(-45deg)
+
+@keyframes move-light-icon
+    from
+        transform: translateX(-10em) skew(-45deg) 
+    to
+        transform: translateX(10em) skew(-45deg)
+
+
+@mixin on-animation
+    animation-name: slide-on
+    animation-duration: 1.5s
+
+@mixin off-animation
+    animation-name: slide-off
+    animation-duration: 1.5s
+
+    
+*
+    box-sizing: border-box
+    outline: none
+    z-index: 1
+
+body
+    z-index: 0
+    margin: 0
+    background: url(../img/brick_016_min_3.jpg)
+    background-size: 133% 113%
+
+.bg_box
+    width: 100%
+    height: calc(100% - 425px)
+
+.up-box
+    position: fixed
+    bottom: 21px
+    right: 21px
+    display: flex
+    display: none
+    justify-content: center
+    align-items: center
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    background-color: #cda100
+    box-shadow: 0 0 16px 0 #ffdd61
+    &:hover
+        cursor: pointer
+        background-color: #f5cd40
+        box-shadow: 0 0 16px 0 #fff2c3
+
+.arrow_up
+    margin: 0
+    width: 35px
+    height: 35px
+    
+
+.locked
+    user-select: none
+    pointer-events: none
+
+.mask,
+.mask-footer
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -1
+    height: 100%
+    width: 100%
+    background-color: rgba(0 ,0 , 0, 0.3)
+
+.mask-footer
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+    height: 100%
+    width: 100%
+    background-color: rgba(0 ,0 , 0, 0.3)
+    
+
+.bg_img
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    margin: 0
+    width: 100%
+
+.cask
+    position: absolute
+    top: 579px
+    left: 140px
+    z-index: -1
+    width: 426px
+
+.bg_box
+    z-index: 0
+
+//------------#### Header ####----------
+
+header
+    display: flex
+    justify-content: center
+    margin: 24px auto
+    width: 90%
+    height: 300px
+
+.head_box
+    position: relative
+    display: flex
+    width: 100%
+    height: 100%
+    background-color: rgba(0 ,0 , 0, 0.92)
+    box-shadow: inset 0px 0px 13px 1px #cda100
+    border-radius: 30px
+
+.hide_menu
+    position: absolute
+    right: 66px
+    top: 41px
+    z-index: 3
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    box-shadow: inset 0px 0px 20px 0px #cda100
+    &:hover
+        cursor: pointer
+    &__box
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        box-shadow: 0px 0px 20px 0px #cda100
+    &__img
+        width: 60px
+        height: 60px
+    &__text
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        margin: 0
+        font-family: "Sfb"
+        color: #cda100
+        font-size: 30px
+
+.logo_box
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 20%
+    &__img
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 150px
+        height: 150px
+        border-radius: 50%
+        background: #cda100a6
+        box-shadow: 0 0 20px 5px #cda100
+        margin-left: 62px
+        // &:before
+        //     content: ''
+        //     position: absolute
+        //     z-index: 4
+        //     top: 0
+        //     left: 0
+        //     width: 150px
+        //     height: 150px
+        //     border-radius: 50%
+        //     background-color: #cda100
+
+.logo
+    width: 100%
+    height: 100%
+    
+
+
+.info_box
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    width: 80%
+
+.ss_box
+    display: flex
+    align-items: center
+    width: 15%
+
+.link_ss
+    display: flex
+    position: relative
+    width: 44px
+    height: 44px
+    margin-left: 4px
+
+.ss_img
+    position: absolute
+    width: 21px
+    height: 21px
+    top: 4px
+    left: 15px
+
+// .ss_mask
+//     position: absolute
+//     width: 66%
+//     height: 66%
+//     top: 1px
+//     left: 11px
+//     border-radius: 50%
+//     background-color: #81680e73
+
+.lang_box
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    color: #cda100
+    font-family: "MEL"
+    margin-top: -21px
+    // width: 20%
+    width: 41%
+
+.lng_opt-info
+    display: none
+    margin: 0
+    text-shadow: 0 1px 2px white
+    @include on-animation
+
+
+.icon_text
+    margin: 2px 0 0 2px
+    font-family: "Sfb"
+    color: #cda100
+    font-size: 20px
+
+.lang_icon,
+.burn_box
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 30px
+    height: 30px
+    background-color: rgba(205, 161, 0, 0.3)
+    border-radius: 50%
+    box-shadow: 0px 0px 8px 0px rgb(205, 161, 0)
+    margin-left: 10px
+    &:hover .icon_text
+        color: #ffdd61 
+
+.shine-icon
+    position: absolute
+    top: -1px
+    left: -1px
+    width: 34px
+    height: 34px
+    overflow: hidden
+    // border: 1px solid white
+    border-radius: 50%
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 1em //width of shine
+        height: 100%
+        background: linear-gradient(to bottom, rgba(#f9e188, 0), rgba(#cda100, 0.9) 50%, rgba(#f9e188, 0))
+        transform: translateX(-10em) skew(-45deg)
+        animation: move-light-icon
+        animation-duration: 4s
+        animation-iteration-count: infinite
+
+.shine-icon-ss
+    position: absolute
+    top: -3px
+    left: 9px
+    width: 34px
+    height: 34px
+    overflow: hidden
+    // border: 1px solid white
+    border-radius: 50%
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 1em //width of shine
+        height: 100%
+        background: linear-gradient(to bottom, rgba(#f9e188, 0), rgba(#cda100, 0.9) 50%, rgba(#f9e188, 0))
+        transform: translateX(-10em) skew(-45deg)
+        animation: move-light-icon
+        animation-duration: 4s
+        animation-iteration-count: infinite
+
+.lang_icon:hover 
+    background-color: #b1a36fb8
+        // background-color: white
+    box-shadow: 0px 0px 8px 2px #ffeca6
+    cursor: pointer
+
+.link_ss:hover .burn_box
+    background-color: #715c12
+    box-shadow: 0px 0px 8px 2px #ffeca6
+
+.img_icon
+    width: 41px
+    height: 41px
+    position: absolute
+    top: -5px
+    left: -5px
+
+.info
+    display: flex
+    align-items: center
+    width: 100%
+    justify-content: center
+
+.info-text
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-end
+    width: 29%
+    text-shadow: 0px 1px 2px white
+
+.address-link
+    text-decoration: none
+
+.address
+    display: flex
+    display: none
+    justify-content: flex-end
+    align-items: center
+    width: 100%
+    font-family: "MEL"
+    color: #cda100
+    @include on-animation
+
+.phone
+    display: flex
+    display: none
+    justify-content: flex-end
+    align-items: center
+    width: 100%
+    font-family: "MEL"
+    text-decoration: none
+    color: #cda100
+    @include on-animation
+
+.nav-lang
+    display: flex
+    display: none
+    justify-content: space-around
+    margin-left: 34px
+    height: 40px
+    width: 95%
+    color: #cda100
+    @include on-animation
+
+.nav_text
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: "Sfb"
+    height: 20px
+    width: 15%
+    font-size: 43px
+    margin: 59px 0px 10px 0px
+    text-decoration: none
+    color: #cda100
+@media (min-width: 993px)
+    .nav_text
+        &:hover
+            color: #f9e188
+            cursor: pointer
+            @include on-animation
+
+
+//-----------#### Header end ####----------
+
+.open-box
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    width: 90%
+    margin: 0 auto
+    height: 50px
+    margin-bottom: 215px
+
+.bg_text_1
+    position: absolute
+    font-family: "BR"
+    color: black
+    top: -8px
+    right: 84px
+    font-size: 32px
+
+.hops
+    position: absolute
+    top: -24px
+    left: 38px
+    width: 300px
+
+.beer
+    position: absolute
+    top: -23px
+    right: 49px
+    width: 188px
+
+.lng_opt-open
+    display: flex
+    display: none
+    justify-content: flex-end
+    align-items: center
+    width: 16%
+    height: 100%
+    color: #f5ca2c
+    font-family: "BR"
+    font-size: 57px
+    text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.92)
+    margin: 21px 0px 0px 170px
+    @include on-animation
+
+.time
+    display: flex
+    display: none
+    justify-content: center
+    // align-items: flex-start
+    flex-direction: column
+    width: 40%
+    margin-left: 22px
+    @include on-animation
+
+.open_time
+    color: #f5ca2c
+    font-family: "BR"
+    font-size: 57px
+    text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.92)
+    margin: 0
+
+//----------##### Slider #####--------
+
+.gallery-box
+    position: relative
+    width: 90%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin: 0 auto
+
+.bg_text
+    position: absolute
+    font-family: "BR"
+    color: black
+    top: 313px
+    left: -26px
+    font-size: 46px
+    text-shadow: 0px -1px 2px #ffb324
+    z-index: 3
+
+.gallery
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 56%
+    height: 369px
+    border-radius: 30px
+    background-color: rgba(0 ,0 , 0, 0.92)
+    box-shadow: inset 0px 0px 13px 1px #cda100
+
+.gold
+    position: absolute
+    width: 165px
+    top: 30px
+    left: 30px
+
+.gold_left
+    position: absolute
+    width: 165px
+    top: 30px
+    right: 26px
+
+.lng_opt-section-name
+    display: flex
+    display: none
+    justify-content: center
+    align-items: center
+    font-family: "Sfb"
+    color: #f5ca2c
+    width: 100%
+    font-size: 43px
+    margin: -21px 0px -27px 0px
+    @include on-animation
+
+.slider_box
+    width: 100%
+    display: flex
+    align-items: center
+
+.zoom
+    width: 57%
+    height: 0
+    box-shadow: 0px 0px 8px 4px #ad7101
+
+.slider
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 44%
+
+.slider-link
+    display: none
+    animation-name: slide-on
+    animation-duration: 2s
+
+.left_box,
+.right_box
+    width: 29%
+
+.left_box
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+.right_box
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+.slider-img
+    width: 306px
+    border-radius: 6px
+    box-shadow: 0px 0px 9px 0px #ec9e0a
+
+.left_arrow,
+.right_arrow
+    width: 26px
+
+.left_arrow:hover,
+.right_arrow:hover
+    cursor: pointer
+    width: 30px
+
+//-------------###### Promotion ######--------------
+
+.promotion-box
+    position: relative
+    width: 90%
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin: 0 auto
+    margin-top: 116px
+    margin-bottom: 98px
+
+.promotion
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 56%
+    height: 369px
+    border-radius: 30px
+    background-color: rgba(0 ,0 , 0, 0.92)
+    box-shadow: inset 0px 0px 13px 1px #cda100
+
+.promo-volume
+    position: absolute
+    top: 37px
+    left: 37px
+    margin: 0
+    font-family: "BR"
+    font-size: 27px
+    color: #daca8e
+    transform: rotate(-38deg)
+
+.beer-multi
+    position: absolute
+    bottom: 28px
+    right: 35px
+    font-family: "MEL"
+    color: #daca8e
+    text-shadow: 0px 1px 2px white
+    margin: 0
+
+.lng_opt-promotion
+    display: flex
+    display: none
+    justify-content: center
+    align-items: center
+    font-family: "Sfb"
+    color: #f5ca2c
+    width: 100%
+    font-size: 43px
+    margin: -21px 0px -27px 0px
+    @include on-animation
+
+.content-promotion
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 80%
+    height: 55%
+
+.promo_info
+    display: none
+    font-family: "MEL"
+    color: #cda100
+    text-shadow: 0px 1px 2px white
+    font-size: 22px
+
+.promotion-img
+    display: flex
+    align-items: center
+    flex-direction: column
+    width: 44%
+
+.gps
+    width: 230px
+
+.point-text
+    margin: 0
+    font-size: 61px
+    font-family: "BR"
+    color: #f5ca2c
+    text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.92)
+
+.gps-point
+    font-family: "MEL"
+    color: #daca8e
+    text-shadow: 0px 1px 2px white
+    margin: 0
+
+.gps-text
+    position: absolute
+    top: 78px
+    right: -19px
+    font-family: "BR"
+    font-size: 41px
+    color: black
+    text-shadow: 0px 1px 2px #efb64c
+    transform: rotate(-36deg)
+
+//----------##### Footer #####----------//
+.footer-box
+    position: relative
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin: 0 auto
+    height: 425px
+    width: 90%
+
+.bg_text-2
+    position: absolute
+    font-family: "BR"
+    color: black
+    left: 244px
+    top: 123px
+    font-size: 65px
+    text-shadow: 0px -1px 2px #ffb324
+
+.cask-left
+    position: absolute
+    left: 49px
+    top: 1589px
+    width: 522px
+    z-index: -1
+
+.footer-about
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 56%
+    height: 369px
+    border-radius: 30px
+    background-color: rgba(0 ,0 , 0, 0.92)
+    box-shadow: inset 0px 0px 13px 1px #cda100
+
+.lng_opt-about
+    display: flex
+    display: none
+    justify-content: center
+    align-items: center
+    font-family: "Sfb"
+    color: #f5ca2c
+    width: 100%
+    font-size: 43px
+    margin: -21px 0px -27px 0px
+    @include on-animation
+
+.footer-about-info
+    display: none
+    font-family: "MEL"
+    color: #cda100
+    text-shadow: 0px 1px 2px white
+    font-size: 22px
+
+.copyrights-box
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin: 0 auto
+    margin-top: 62px
+    width: 90%
+
+.copyrights
+    font-family: "MEL"
+    color: #f5e528
+    text-shadow: 0px 1px 2px #cda100
+    padding: 10px 20px
+    margin: 21px 20px
+    font-size: 22px
+    border-radius: 20%
+    background-color: rgba(0, 0, 0, 0.3)
+
+.copyrights > a
+    font-family: "BR"
+    font-size: 26px
+    text-decoration: none
+    color: #f5e528
+
+//-----------##### End Footer #####------------//
+
+//-----------##### Aside events #####---------//
+
+.aside-mask
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 9
+    display: none
+    height: 100%
+    width: 100%
+    background-color: rgba(0 ,0 , 0, 0.7)
+    @include on-animation
+
+.events,
+.about
+    position: fixed
+    top: 30%
+    left: 23%
+    z-index: 10
+    display: flex
+    display: none
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    width: 56%
+    height: 369px
+    border-radius: 30px
+    font-family: "BR"
+    background-color: rgba(0 ,0 , 0, 0.92)
+    color: #f9e188
+    box-shadow: inset 0px 0px 13px 1px #cda100
+    @include on-animation
+
+.close-events
+    position: absolute
+    top: 18px
+    right: 18px
+    z-index: 10
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    background-color: #cda100
+    box-shadow: 0 0 16px 0 #ffdd61
+    &:hover
+        cursor: pointer
+        background-color: #f5cd40
+        box-shadow: 0 0 16px 0 #fff2c3
+
+.close
+    margin: 0
+    width: 35px
+    height: 35px
+
+.event-name
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 25%
+    width: 100%
+    margin: 0
+    font-size: 45px
+
+.event-name > span
+    display: block
+    width: 15px
+
+.timer
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 57px
+    width: 100%
+    height: 15%
+
+.timer > p
+    margin: 0 6px 0 16px
+
+.event-promo
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    width: 80%
+    height: 60%
+    margin: 0 auto
+    font-family: "MEL"
+    font-size: 16px
+    text-align: justify
+
+.close-event
+    @include off-animation
+
+//------------##### Aside About #####-----------//
+
+.about
+    display: flex
+    display: none
+    flex-direction: column
+
+.about-logo
+    position: absolute
+    top: 83px
+    left: 44px
+    width: 282px
+    border-radius: 20%
+
+.shine-logo
+    position: absolute
+    top: 83px
+    left: 93px
+    height: 184px
+    width: 184px
+    overflow: hidden
+    border-radius: 50%
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 1.5em //width of shine
+        height: 100%
+        background: linear-gradient(to bottom, rgba(#f9e188, 0), rgba(#cda100, 0.9) 50%, rgba(#f9e188, 0))
+        transform: translateX(-2em) skew(-45deg) //наклон (skew) translateX - to move outsite the button
+        animation: move-light
+        animation-duration: 2.5s
+        animation-iteration-count: infinite
+        
+
+.info-about
+    margin-left: 20%
+
+.about_list
+    display: none
+    flex-direction: column
+
+.about_list > p
+    margin: 0
+    font-size: 26px
+
+.more
+    position: absolute
+    bottom: 20px
+    right: -8px
+    display: none
+    flex-direction: column
+    font-family: "MEL"
+    font-size: 22px
+    text-shadow: 0 1px 2px white
+    transform: rotate(-20deg)
+
+.more > a
+    font-family: "MEL"
+    font-size: 22px
+    text-decoration: none
+    color: #f9e188
+
+.more a > span
+    font-family: "BR"
+    font-size: 26px
+
+
+
+.ru
+    font-family: "BR"
+    font-size: 62px
+.ru-gallery
+    font-family: "BR"
+    font-size: 52px
+
+.active-slider
+    display: block
+
+.active
+    display: flex
+
+.active_select
+    color: #f7fbb7 
+
+// // --------------### MEDIA max-width: 1520px ###-------------------//
+
+@media (max-width: 1519px)
+    .bg_text-2
+        top: 121px
+        font-size: 57px
+
+    .cask-left
+        width: 412px
+        top: 1631px
+
+// // --------------### MEDIA max-width: 1440px ###-------------------//
+
+@media (max-width: 1440px)
+    .promo_scroll
+        margin-right: 50px
+
+// // --------------### MEDIA max-width: 1380px ###-------------------//
+
+@media (max-width: 1380px)
+
+    .cask
+        top: 617px
+        left: 118px
+        width: 352px
+
+    .bg_text
+        top: 335px
+        left: -26px
+        font-size: 44px
+
+    //--------##### Header #####---------//
+
+    .promo_scroll
+        margin-right: 40px
+
+    //--------##### Gallery #####--------//
+
+    .gold
+        width: 142px
+
+    .gold_left
+        width: 142px
+
+    .left_arrow
+        margin-right: 18px
+
+    .right_arrow
+        margin-left: 18px
+
+    .footer-about-info
+        font-size: 19px
+
+    .cask-left
+        width: 373px
+        left: 26px
+
+    .bg_text-2
+        left: 174px
+        font-size: 47px
+
+// // --------------### MEDIA max-width: 1280px ###-------------------//
+
+@media (max-width: 1280px)
+    .logo
+        width: 215px
+        margin-left: 43px
+
+    .nav_text
+            font-size: 39px
+
+    .lang_box
+        margin-top: -15px
+        font-size: 14px
+
+    .info-text
+        font-size: 14px
+
+    .ru
+        font-size: 52px
+
+    //-----#### Gallery ####----//
+    .gold_left
+        width: 95px
+
+    .gold
+        width: 95px
+
+    //-----##### Promo ####-----//
+    .gps-text
+        font-size: 35px
+
+    // // --------------### MEDIA max-width: 1201px ###-------------------//
+
+@media (max-width: 1201px)
+    .logo_box
+        width: 22%
+
+    .info_box
+        width: 78%
+
+    .nav_text
+        font-size: 37px
+
+    .lng_opt-open
+        margin: 10px 0px 0px 71px
+        font-size: 50px
+
+    .open_time
+        font-size: 50px
+
+    .beer
+        top: -23px
+        right: 58px
+        width: 147px
+
+    .ru
+        font-size: 45px
+
+    .hops
+        top: -24px
+        left: 38px
+        width: 221px
+
+    //-----#### Gallery ####----//
+    .slider-img
+        width: 272px
+
+    .cask
+        width: 307px
+
+    //------#### Promo ####-----//
+    .gps-text
+        font-size: 33px
+        top: 105px
+
+    //-----#### About ####-----//
+    .footer-about-info
+        font-size: 17px
+
+@import 'blocks/_media'

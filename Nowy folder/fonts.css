@@ -1,0 +1,24 @@
+@font-face {
+  font-display: swap;
+  font-family: "Sfb";
+  src: url(../fonts/BernadetteRough.woff2) format("woff2"), url(../fonts/BernadetteRough.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "DS";
+  src: url(../fonts/DancingScriptOT.woff2) format("woff2"), url(../fonts/DancingScriptOT.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "MEL";
+  src: url(../fonts/MontserratAlternates-ExtraLight.woff2) format("woff2"), url(../fonts/MontserratAlternates-ExtraLight.woff) format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "BR";
+  src: url(../fonts/HitchHike.woff2) format("woff2"), url(../fonts/HitchHike.woff) format("woff");
+}
+/*# sourceMappingURL=fonts.css.map */
