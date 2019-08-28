@@ -208,6 +208,7 @@ header {
 }
 
 .hide_menu {
+  display: none;
   position: absolute;
   right: 66px;
   top: 41px;
@@ -243,9 +244,9 @@ header {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   margin: 0;
-  font-family: "Sfb";
+  font-family: "alger";
   color: #cda100;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .logo_box {
@@ -279,6 +280,18 @@ header {
   -webkit-box-shadow: 0 0 20px 5px #cda100;
           box-shadow: 0 0 20px 5px #cda100;
   margin-left: 62px;
+}
+
+.logo_box__img:before {
+  content: '';
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #cda1001a;
 }
 
 .logo {
@@ -355,7 +368,7 @@ header {
 
 .icon_text {
   margin: 2px 0 0 2px;
-  font-family: "Sfb";
+  font-family: "alger";
   color: #cda100;
   font-size: 20px;
 }
@@ -546,8 +559,6 @@ header {
   display: -ms-flexbox;
   display: flex;
   display: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   margin-left: 34px;
   height: 40px;
   width: 95%;
@@ -569,7 +580,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Sfb";
+  font-family: "alger";
   height: 20px;
   width: 15%;
   font-size: 43px;
@@ -587,6 +598,22 @@ header {
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
   }
+}
+
+.gallery_scroll {
+  width: 25%;
+}
+
+.promo_scroll {
+  width: 25%;
+}
+
+.event {
+  width: 30%;
+}
+
+.about_us {
+  width: 17%;
 }
 
 .open-box {
@@ -750,7 +777,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Sfb";
+  font-family: "alger";
   color: #f5ca2c;
   width: 100%;
   font-size: 43px;
@@ -914,7 +941,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Sfb";
+  font-family: "alger";
   color: #f5ca2c;
   width: 100%;
   font-size: 43px;
@@ -1055,7 +1082,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Sfb";
+  font-family: "alger";
   color: #f5ca2c;
   width: 100%;
   font-size: 43px;
@@ -1268,9 +1295,13 @@ header {
 .about-logo {
   position: absolute;
   top: 83px;
-  left: 44px;
-  width: 282px;
-  border-radius: 20%;
+  left: 93px;
+  width: 184px;
+  height: 184px;
+  border-radius: 50%;
+  background: #cda100a6;
+  -webkit-box-shadow: 0 0 20px 5px #cda100;
+          box-shadow: 0 0 20px 5px #cda100;
 }
 
 .shine-logo {
@@ -1382,13 +1413,10 @@ header {
   }
 }
 
-@media (max-width: 1440px) {
-  .promo_scroll {
-    margin-right: 50px;
-  }
-}
-
 @media (max-width: 1380px) {
+  .nav_text {
+    font-size: 39px;
+  }
   .cask {
     top: 617px;
     left: 118px;
@@ -1398,9 +1426,6 @@ header {
     top: 335px;
     left: -26px;
     font-size: 44px;
-  }
-  .promo_scroll {
-    margin-right: 40px;
   }
   .gold {
     width: 142px;
@@ -1429,11 +1454,8 @@ header {
 
 @media (max-width: 1280px) {
   .logo {
-    width: 215px;
-    margin-left: 43px;
-  }
-  .nav_text {
-    font-size: 39px;
+    width: 150px;
+    height: 150px;
   }
   .lang_box {
     margin-top: -15px;
@@ -1464,7 +1486,7 @@ header {
     width: 78%;
   }
   .nav_text {
-    font-size: 37px;
+    font-size: 32px;
   }
   .lng_opt-open {
     margin: 10px 0px 0px 71px;
@@ -1536,6 +1558,38 @@ header {
   }
 }
 
+@media (max-width: 1050px) {
+  header {
+    height: 240px;
+  }
+  .logo_box__img {
+    width: 120px;
+    height: 120px;
+  }
+  .logo_box__img:before {
+    content: '';
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #cda1001a;
+  }
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+  .nav_text {
+    margin: 24px 0px 10px 0px;
+    font-size: 28px;
+  }
+  .ru {
+    font-size: 45px;
+  }
+}
+
 @media (max-width: 1001px) {
   .lang_box {
     margin-left: 15%;
@@ -1557,6 +1611,12 @@ header {
 }
 
 @media (max-width: 992px) {
+  .logo_box__img {
+    margin-left: 105px;
+  }
+  .hide_menu {
+    display: block;
+  }
   .info_box {
     position: relative;
   }
@@ -1571,8 +1631,8 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 299px;
-    width: 260px;
+    height: 240px;
+    width: 236px;
     z-index: 5;
     border: 1px solid #cda100;
     border-radius: 26px;
@@ -1584,14 +1644,70 @@ header {
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
   }
+  .lang_box {
+    width: 19%;
+  }
   .nav_text {
-    margin: 10px;
-    width: 200px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    margin: 15px 10px 20px;
+    width: 174px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-shadow: 3px 5px 1px black;
     color: #ffdd61;
+  }
+  .ss_box {
+    position: absolute;
+    top: 61px;
+    left: 314px;
+    margin-left: 0;
+  }
+  .lang_box {
+    margin-left: 0;
+    position: absolute;
+    top: 78px;
+    left: 118px;
+  }
+  .info-text {
+    position: absolute;
+    bottom: 54px;
+    left: 195px;
+  }
+}
+
+@media (max-width: 920px) {
+  .ss_box {
+    position: absolute;
+    top: 61px;
+    left: 292px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ss_box {
+    position: absolute;
+    top: 59px;
+    left: 113px;
+    width: 25%;
+  }
+  .info-text {
+    position: absolute;
+    bottom: 54px;
+    left: auto;
+    right: 54px;
+  }
+  .lang_box {
+    margin-left: 0;
+    position: absolute;
+    top: 170px;
+    left: 123px;
+  }
+  .footer-about-info {
+    font-size: 15px;
+  }
+  .bg_text-2 {
+    left: 68px;
+    top: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */

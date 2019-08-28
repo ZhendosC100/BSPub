@@ -134,6 +134,7 @@ header
     border-radius: 30px
 
 .hide_menu
+    display: none
     position: absolute
     right: 66px
     top: 41px
@@ -158,9 +159,10 @@ header
         left: 50%
         transform: translate(-50%, -50%)
         margin: 0
-        font-family: "Sfb"
+        // font-family: "Sfb"
+        font-family: "alger"
         color: #cda100
-        font-size: 30px
+        font-size: 22px
 
 .logo_box
     display: flex
@@ -178,16 +180,16 @@ header
         background: #cda100a6
         box-shadow: 0 0 20px 5px #cda100
         margin-left: 62px
-        // &:before
-        //     content: ''
-        //     position: absolute
-        //     z-index: 4
-        //     top: 0
-        //     left: 0
-        //     width: 150px
-        //     height: 150px
-        //     border-radius: 50%
-        //     background-color: #cda100
+        &:before
+            content: ''
+            position: absolute
+            z-index: 4
+            top: 0
+            left: 0
+            width: 150px
+            height: 150px
+            border-radius: 50%
+            background-color: #cda1001a
 
 .logo
     width: 100%
@@ -248,7 +250,8 @@ header
 
 .icon_text
     margin: 2px 0 0 2px
-    font-family: "Sfb"
+    // font-family: "Sfb"
+    font-family: "alger"
     color: #cda100
     font-size: 20px
 
@@ -369,7 +372,8 @@ header
 .nav-lang
     display: flex
     display: none
-    justify-content: space-around
+    // justify-content: space-around
+    // justify-content: space-between
     margin-left: 34px
     height: 40px
     width: 95%
@@ -381,7 +385,8 @@ header
     display: flex
     justify-content: center
     align-items: center
-    font-family: "Sfb"
+    // font-family: "Sfb"
+    font-family: "alger"
     height: 20px
     width: 15%
     font-size: 43px
@@ -394,6 +399,15 @@ header
             color: #f9e188
             cursor: pointer
             @include on-animation
+
+.gallery_scroll
+    width: 25%
+.promo_scroll
+    width: 25%
+.event
+    width: 30%
+.about_us
+    width: 17%
 
 
 //-----------#### Header end ####----------
@@ -437,6 +451,7 @@ header
     height: 100%
     color: #f5ca2c
     font-family: "BR"
+    // font-family: "alger"
     font-size: 57px
     text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.92)
     margin: 21px 0px 0px 170px
@@ -455,6 +470,7 @@ header
 .open_time
     color: #f5ca2c
     font-family: "BR"
+    // font-family: "alger"
     font-size: 57px
     text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.92)
     margin: 0
@@ -507,7 +523,8 @@ header
     display: none
     justify-content: center
     align-items: center
-    font-family: "Sfb"
+    // font-family: "Sfb"
+    font-family: "alger"
     color: #f5ca2c
     width: 100%
     font-size: 43px
@@ -610,7 +627,8 @@ header
     display: none
     justify-content: center
     align-items: center
-    font-family: "Sfb"
+    // font-family: "Sfb"
+    font-family: "alger"
     color: #f5ca2c
     width: 100%
     font-size: 43px
@@ -705,7 +723,8 @@ header
     display: none
     justify-content: center
     align-items: center
-    font-family: "Sfb"
+    // font-family: "Sfb"
+    font-family: "alger"
     color: #f5ca2c
     width: 100%
     font-size: 43px
@@ -849,9 +868,12 @@ header
 .about-logo
     position: absolute
     top: 83px
-    left: 44px
-    width: 282px
-    border-radius: 20%
+    left: 93px
+    width: 184px
+    height: 184px
+    border-radius: 50%
+    background: #cda100a6
+    box-shadow: 0 0 20px 5px #cda100
 
 .shine-logo
     position: absolute
@@ -925,144 +947,6 @@ header
 .active_select
     color: #f7fbb7 
 
-// // --------------### MEDIA max-width: 1520px ###-------------------//
 
-@media (max-width: 1519px)
-    .bg_text-2
-        top: 121px
-        font-size: 57px
-
-    .cask-left
-        width: 412px
-        top: 1631px
-
-// // --------------### MEDIA max-width: 1440px ###-------------------//
-
-@media (max-width: 1440px)
-    .promo_scroll
-        margin-right: 50px
-
-// // --------------### MEDIA max-width: 1380px ###-------------------//
-
-@media (max-width: 1380px)
-
-    .cask
-        top: 617px
-        left: 118px
-        width: 352px
-
-    .bg_text
-        top: 335px
-        left: -26px
-        font-size: 44px
-
-    //--------##### Header #####---------//
-
-    .promo_scroll
-        margin-right: 40px
-
-    //--------##### Gallery #####--------//
-
-    .gold
-        width: 142px
-
-    .gold_left
-        width: 142px
-
-    .left_arrow
-        margin-right: 18px
-
-    .right_arrow
-        margin-left: 18px
-
-    .footer-about-info
-        font-size: 19px
-
-    .cask-left
-        width: 373px
-        left: 26px
-
-    .bg_text-2
-        left: 174px
-        font-size: 47px
-
-// // --------------### MEDIA max-width: 1280px ###-------------------//
-
-@media (max-width: 1280px)
-    .logo
-        width: 215px
-        margin-left: 43px
-
-    .nav_text
-            font-size: 39px
-
-    .lang_box
-        margin-top: -15px
-        font-size: 14px
-
-    .info-text
-        font-size: 14px
-
-    .ru
-        font-size: 52px
-
-    //-----#### Gallery ####----//
-    .gold_left
-        width: 95px
-
-    .gold
-        width: 95px
-
-    //-----##### Promo ####-----//
-    .gps-text
-        font-size: 35px
-
-    // // --------------### MEDIA max-width: 1201px ###-------------------//
-
-@media (max-width: 1201px)
-    .logo_box
-        width: 22%
-
-    .info_box
-        width: 78%
-
-    .nav_text
-        font-size: 37px
-
-    .lng_opt-open
-        margin: 10px 0px 0px 71px
-        font-size: 50px
-
-    .open_time
-        font-size: 50px
-
-    .beer
-        top: -23px
-        right: 58px
-        width: 147px
-
-    .ru
-        font-size: 45px
-
-    .hops
-        top: -24px
-        left: 38px
-        width: 221px
-
-    //-----#### Gallery ####----//
-    .slider-img
-        width: 272px
-
-    .cask
-        width: 307px
-
-    //------#### Promo ####-----//
-    .gps-text
-        font-size: 33px
-        top: 105px
-
-    //-----#### About ####-----//
-    .footer-about-info
-        font-size: 17px
 
 @import 'blocks/_media'
