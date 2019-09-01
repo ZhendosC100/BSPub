@@ -2028,4 +2028,60 @@ header {
     text-align: center;
   }
 }
+
+@media (max-width: 370px) {
+  .logo_box__img {
+    left: -28%;
+    top: 23px;
+  }
+  .hide_menu {
+    top: 25px;
+    right: 15%;
+  }
+  .nav-lang {
+    right: 110px;
+    width: 186px;
+    padding: 10px 0px;
+  }
+  .nav_text {
+    font-size: 22px;
+    margin-left: 5px;
+  }
+  .info-text {
+    top: 88px;
+  }
+  .address {
+    width: 108%;
+  }
+  .phone {
+    width: 135%;
+    margin-left: -26px;
+  }
+  .lng_opt-section-name, .lng_opt-promotion, .lng_opt-about {
+    font-size: 29px;
+  }
+  .lng_opt-section-name {
+    margin: 0px 0px -32px 0px;
+  }
+  .gold {
+    top: 34px;
+    left: 20px;
+  }
+  .gold_left {
+    top: 34px;
+    right: 19px;
+  }
+  .left_arrow {
+    margin-right: 0;
+    position: absolute;
+    top: 84px;
+    left: 39px;
+  }
+  .right_arrow {
+    margin-left: 0;
+    position: absolute;
+    right: -36px;
+    top: 84px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
