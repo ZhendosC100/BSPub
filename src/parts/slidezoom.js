@@ -51,7 +51,12 @@ export default function slideZoom(){
            
             if (target && target.classList.contains('slider-img')) {
 
-                k = document.documentElement.clientWidth * 0.42791318;
+                if(document.documentElement.clientWidth < 550){
+                    k = document.documentElement.clientWidth * 0.72791318;
+                } else {
+                    k = document.documentElement.clientWidth * 0.42791318;
+                }
+                
                 
                 for (let i = 0; i < zoomImage.length; i++) {
                     if (target == sliderImg[i]) {

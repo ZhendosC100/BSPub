@@ -1,17 +1,25 @@
 {
-  "name": "BeczkaChmelu",
+  "name": "BeerStation",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "BSPub",
+  "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack",
     "build": "webpack --mode=production"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhendosC100/BSPub.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Yauhen Tretsyak",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhendosC100/BSPub/issues"
+  },
+  "homepage": "https://github.com/ZhendosC100/BSPub#readme",
   "devDependencies": {
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
   }
 }
