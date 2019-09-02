@@ -45,34 +45,57 @@ export default function slideZoom(){
             }, 2);
         }
 
+        // function slideZoom(z) {
+        //     for (let i = 0; i < zoomImage.length; i++) {
+        //         if (target == sliderImg[i]) {
+        //             img.src = zoomImage[i].getAttribute('href');
+        //             dark.style.display = 'flex';
+        //             img.style.display = 'flex';
+                    
+        //             setTimeout(function(){
+        //                 stepNumber(0, k, step);
+        //             }, 250);
+
+        //             img.classList.add(z);
+        //             img.classList.add('locked');
+        //             break;
+        //         }
+        //     }
+        // }
+
+
         sliderBox.addEventListener('click', (event) => {
             event.preventDefault();
             let target = event.target;
            
             if (target && target.classList.contains('slider-img')) {
 
-                if(document.documentElement.clientWidth < 550){
-                    k = document.documentElement.clientWidth * 0.72791318;
-                } else {
-                    k = document.documentElement.clientWidth * 0.42791318;
-                }
-                
-                
-                for (let i = 0; i < zoomImage.length; i++) {
-                    if (target == sliderImg[i]) {
-                        img.src = zoomImage[i].getAttribute('href');
-                        dark.style.display = 'flex';
-                        img.style.display = 'flex';
-                        
-                        setTimeout(function(){
-                            stepNumber(0, k, step);
-                        }, 250);
+                function slideZoom(z) {
+                    for (let i = 0; i < zoomImage.length; i++) {
+                        if (target == sliderImg[i]) {
+                            img.src = zoomImage[i].getAttribute('href');
+                            dark.style.display = 'flex';
+                            img.style.display = 'flex';
+                            
+                            setTimeout(function(){
+                                stepNumber(0, k, step);
+                            }, 250);
 
-                        img.classList.add('zoom');
-                        img.classList.add('locked');
-                        break;
+                            img.classList.add(z);
+                            img.classList.add('locked');
+                            break;
+                        }
                     }
                 }
+
+                if(document.documentElement.clientWidth < 550){
+                    k = document.documentElement.clientWidth * 0.72791318;
+                    slideZoom('zoom_mobile');
+                } else {
+                    k = document.documentElement.clientWidth * 0.42791318;
+                    slideZoom('zoom');
+                }
+                
             }
         });
 

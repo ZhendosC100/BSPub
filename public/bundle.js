@@ -1,2 +1,775 @@
-!function(e){var t={};function n(o){if(t[o])return t[o].exports;var l=t[o]={i:o,l:!1,exports:{}};return e[o].call(l.exports,l,l.exports,n),l.l=!0,l.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var l in e)n.d(o,l,function(t){return e[t]}.bind(null,l));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){"use strict";n.r(t),window.addEventListener("DOMContentLoaded",()=>{!function(){console.log("Lang OK");let e=document.querySelectorAll(".lang_icon"),t=document.querySelectorAll(".lng_opt-info"),n=document.querySelectorAll(".icon_text"),o=document.querySelectorAll(".nav-lang"),l=document.querySelectorAll(".address"),c=document.querySelectorAll(".phone"),r=document.querySelectorAll(".lng_opt-open"),i=document.querySelectorAll(".time"),s=document.querySelectorAll(".lng_opt-section-name"),u=document.querySelectorAll(".lng_opt-promotion"),a=document.querySelectorAll(".promo_info"),d=document.querySelectorAll(".about_list"),m=document.querySelectorAll(".more"),f=document.querySelectorAll(".lng_opt-about"),y=document.querySelectorAll(".footer-about-info"),v=(e,t,n)=>{for(let o=e;o<t.length;o++)t[o].classList.remove(n)},p=(e,t,n)=>{t[e].classList.add(n)};for(let g=0;g<e.length;g++){let h=g;e[g].addEventListener("click",()=>{v(0,n,"active_select"),p(h,n,"active_select"),v(0,t,"active"),p(h,t,"active"),v(0,o,"active"),p(h,o,"active"),v(0,l,"active"),p(h,l,"active"),v(0,c,"active"),p(h,c,"active"),v(0,r,"active"),p(h,r,"active"),v(0,i,"active"),p(h,i,"active"),v(0,s,"active"),p(h,s,"active"),v(0,u,"active"),p(h,u,"active"),v(0,a,"active"),p(h,a,"active"),v(0,d,"active"),p(h,d,"active"),v(0,m,"active"),p(h,m,"active"),v(0,f,"active"),p(h,f,"active"),v(0,y,"active"),p(h,y,"active")})}}(),function(){console.log("slider OK");let e=document.querySelectorAll(".slider-link"),t=document.querySelector(".left_arrow"),n=document.querySelector(".right_arrow"),o=1;function l(t){t>e.length&&(o=1),t<1&&(o=e.length),e.forEach(e=>e.style.display="none"),e[o-1].style.display="block"}function c(e){l(o+=e)}l(o),t.addEventListener("click",function(){c(-1),console.log("prev")}),n.addEventListener("click",function(){c(1)})}(),function(){console.log("SlideZoom OK");let e,t=document.querySelector(".slider"),n=document.querySelectorAll(".slider-link"),o=document.querySelectorAll(".slider-img"),l=document.createElement("div"),c=document.createElement("img");function r(e,t,n){setInterval(function(){e<t&&(e+=n,c.style.height=`${e}px`)},2)}c.style.cssText="display:flex;                            align-items: center;                            justify-content: center;                            margin: auto;                            z-index: 10;                             display: none;                            border-radius: 18px",l.style.cssText="position: fixed;                                top: 0;                                 left: 0;                                 align-items: center;                                justify-content: center;                                width: 100%;                                 height: 100%;                                 z-index: 9;                                 display: none;                                background-color: rgba(0, 0, 0, 0.5);",document.body.appendChild(l),l.appendChild(c),l.classList.add("dark"),t.addEventListener("click",t=>{t.preventDefault();let i=t.target;if(i&&i.classList.contains("slider-img")){e=document.documentElement.clientWidth<550?.72791318*document.documentElement.clientWidth:.42791318*document.documentElement.clientWidth;for(let t=0;t<n.length;t++)if(i==o[t]){c.src=n[t].getAttribute("href"),l.style.display="flex",c.style.display="flex",setTimeout(function(){r(0,e,3)},250),c.classList.add("zoom"),c.classList.add("locked");break}}}),l.addEventListener("click",e=>{let t=e.target;(t&&t.classList.contains("dark")||t.classList.contains("zoom"))&&(l.style.display="none",c.style.display="none",c.classList.remove("zoom"),c.classList.remove("locked"),c.style.height="0px")})}(),function(){let e=document.createElement("div");if(e.style.cssText="pointer-events:auto","auto"!==e.style.pointerEvents){e=null;let t=function(e){let t=(e=e||window.event).target||e.srcElement;t&&/\slocked\s/.test(" "+t.className+" ")&&(e.stopPropagation?(e.preventDefault(),e.stopPropagation()):(e.returnValue=!0,e.cancelBubble=!0))};document.addEventListener?(document.addEventListener("mousedown",t,!1),document.addEventListener("contextmenu",t,!1)):(document.attachEvent("onmousedown",t),document.attachEvent("oncontextmenu",t))}}(),window.oncontextmenu=e=>{e.preventDefault()},function(){let e=document.querySelectorAll(".gallery_scroll"),t=document.querySelectorAll(".promo_scroll"),n=document.querySelectorAll(".up-box"),o=document.querySelectorAll(".about_us"),l=(/constructor/i.test(window.HTMLElement)||(!window.safari||safari.pushNotification).toString(),!!document.documentMode);function c(e,t){e.forEach(function(e){e.addEventListener("click",function(n){n.preventDefault();let o=e.getAttribute("href"),l=document.querySelector(o).offsetTop+t;window.scrollTo({top:l,behavior:"smooth"})})})}!l&&window.StyleMedia,l||(c(e,490),c(t,980),c(n,-25),c(o,980)),window.addEventListener("scroll",()=>{n.forEach(function(e){document.documentElement.scrollTop>220?e.classList.add("active"):e.classList.remove("active")})})}(),function(){let e=document.querySelectorAll(".event"),t=document.querySelectorAll(".close-events"),n=document.querySelector(".aside-mask"),o=document.querySelector(".events"),l=0,c=document.getElementById("days"),r=document.getElementById("hours"),i=document.getElementById("minutes"),s=document.getElementById("seconds"),u="2019-09-01T09:00:00";e.forEach(e=>e.addEventListener("click",function(){o.style.display="flex",n.style.display="flex",setTimeout(function(){let e=e=>{let t=Date.parse(e)-Date.parse(new Date),n=Math.floor(t/1e3%60),o=Math.floor(t/1e3/60%60),l=Math.floor(t/1e3/60/60%24);return{total:t,days:Math.floor(t/864e5),hours:l,minutes:o,seconds:n}};!function(t){let n=document.getElementById("days"),o=document.getElementById("hours"),l=document.getElementById("minutes"),c=document.getElementById("seconds"),r=setInterval(function(){let i=e(t);n.textContent=i.days,o.textContent=i.hours,l.textContent=i.minutes,c.textContent=i.seconds,o.textContent.length<2&&(o.textContent="0"+i.hours);l.textContent.length<2&&(l.textContent="0"+i.minutes);c.textContent.length<2&&(c.textContent="0"+i.seconds);i.total<=0&&(clearInterval(r),n.textContent="00",o.textContent="00",l.textContent="00",c.textContent="00")},1e3)}("2019-09-01T09:00:00")},4e3);let e=Date.parse(u)-Date.parse(new Date),t=Math.floor(e/1e3%60),a=Math.floor(e/1e3/60%60),d=Math.floor(e/1e3/60/60%24),m=Math.floor(e/864e5);function f(e,t,n,o,c){return setTimeout(function(){o.textContent=`0${e}`.slice(-2),setInterval(function(){e<t&&(e+=n,o.textContent=o==s&&e>=4?`0${e-4}`.slice(-2):`0${e}`.slice(-2))},20)},c),l=1}0==l&&(f(0,m,1,c,2e3),f(0,d,1,r,2700),f(0,a,1,i,3400),f(0,t,1,s,4100))})),t.forEach(e=>e.addEventListener("click",function(){o.classList.add("close-event"),n.classList.add("close-event"),setTimeout(function(){o.style.display="none",n.style.display="none",o.classList.remove("close-event"),n.classList.remove("close-event")},1200)}))}(),function(){let e=document.querySelectorAll(".about_us"),t=document.querySelectorAll(".close-events"),n=document.querySelector(".about"),o=document.querySelector(".aside-mask");e.forEach(e=>e.addEventListener("click",function(e){n.style.display="flex",o.style.display="flex"})),t.forEach(e=>e.addEventListener("click",function(){n.classList.add("close-event"),setTimeout(function(){n.style.display="none",n.classList.remove("close-event"),o.classList.remove("close-event")},1200)}))}(),function(){let e=document.querySelector(".nav-lang"),t=document.querySelector(".hide_menu"),n=(document.documentElement.clientWidth,!1);t.addEventListener("click",()=>{n?(e.style.display="none",n=!1):(e.style.display="flex",n=!0)})}()})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _parts_language__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parts/language */ "./src/parts/language.js");
+/* harmony import */ var _parts_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./parts/slider */ "./src/parts/slider.js");
+/* harmony import */ var _parts_slidezoom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/slidezoom */ "./src/parts/slidezoom.js");
+/* harmony import */ var _parts_download_off__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parts/download_off */ "./src/parts/download_off.js");
+/* harmony import */ var _parts_scroll_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./parts/scroll_page */ "./src/parts/scroll_page.js");
+/* harmony import */ var _parts_timer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./parts/timer */ "./src/parts/timer.js");
+/* harmony import */ var _parts_about__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./parts/about */ "./src/parts/about.js");
+/* harmony import */ var _parts_hidden_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./parts/hidden_menu */ "./src/parts/hidden_menu.js");
+
+
+
+
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', () =>{
+    'use strict';
+
+    Object(_parts_language__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    Object(_parts_slider__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    Object(_parts_slidezoom__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    Object(_parts_download_off__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    Object(_parts_scroll_page__WEBPACK_IMPORTED_MODULE_4__["default"])();
+    Object(_parts_timer__WEBPACK_IMPORTED_MODULE_5__["default"])();
+    Object(_parts_about__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    Object(_parts_hidden_menu__WEBPACK_IMPORTED_MODULE_7__["default"])();
+
+});
+
+/***/ }),
+
+/***/ "./src/parts/about.js":
+/*!****************************!*\
+  !*** ./src/parts/about.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return aboutAside; });
+function aboutAside(){
+
+    let aboutUs = document.querySelectorAll('.about_us'),
+        close = document.querySelectorAll('.close-events'),
+        about = document.querySelector('.about'),
+        asideMask = document.querySelector('.aside-mask');
+
+    aboutUs.forEach((item) => 
+        item.addEventListener('click', function(e){
+            about.style.display = 'flex';
+            asideMask.style.display = 'flex';
+        })
+    );
+
+    close.forEach((item) => 
+        item.addEventListener('click', function(){
+            //asideMask hide in "timer.js"
+            about.classList.add('close-event');
+    
+            setTimeout(function () {
+                about.style.display = 'none';
+                about.classList.remove('close-event');
+                asideMask.classList.remove('close-event');
+            }, 1200);
+        })
+    );
+
+}
+
+/***/ }),
+
+/***/ "./src/parts/download_off.js":
+/*!***********************************!*\
+  !*** ./src/parts/download_off.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return downloadOff; });
+function downloadOff() {
+
+    (function () {
+        "use strict";
+    
+        let el = document.createElement('div');
+        el.style.cssText = 'pointer-events:auto';
+    
+        if (el.style.pointerEvents !== 'auto') {
+            el = null;
+    
+            let _lock = function (evt) {
+                evt = evt || window.event;
+                let el = evt.target || evt.srcElement;
+                if (el && /\slocked\s/.test(' ' + el.className + ' ')) {
+                    if (evt.stopPropagation) {
+                        evt.preventDefault();
+                        evt.stopPropagation();
+                    } else {
+                        evt.returnValue = true;
+                        evt.cancelBubble = true;
+                    }
+                }
+            };
+    
+            if (document.addEventListener) {
+                document.addEventListener('mousedown', _lock, false);
+                document.addEventListener('contextmenu', _lock, false);
+            } else {
+                document.attachEvent('onmousedown', _lock);
+                document.attachEvent('oncontextmenu', _lock);
+            }
+        }
+    })();
+
+    //Save logo
+
+    // off context menu on the site
+
+    window.oncontextmenu = (e) => {
+        e.preventDefault();
+      };
+}
+
+/***/ }),
+
+/***/ "./src/parts/hidden_menu.js":
+/*!**********************************!*\
+  !*** ./src/parts/hidden_menu.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hideMenu; });
+function hideMenu(){
+
+    let navLang = document.querySelector('.nav-lang'),
+        hiddenMenu = document.querySelector('.hide_menu'),
+        cWidth = document.documentElement.clientWidth,
+        k = false;
+    hiddenMenu.addEventListener('click', () => {
+
+        if (k){
+            navLang.style.display = 'none';
+            k = false;
+        } else {
+            navLang.style.display = 'flex';
+            k = true;
+        }
+    });
+
+}
+
+/***/ }),
+
+/***/ "./src/parts/language.js":
+/*!*******************************!*\
+  !*** ./src/parts/language.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return language; });
+function language(){
+    console.log("Lang OK");
+
+    let selectLang = document.querySelectorAll('.lang_icon'),
+        lang = document.querySelectorAll('.lng_opt-info'),
+        iconLang = document.querySelectorAll('.icon_text'),
+        navLanguage = document.querySelectorAll('.nav-lang'),
+        address = document.querySelectorAll('.address'),
+        phoneLang = document.querySelectorAll('.phone'),
+        openLang = document.querySelectorAll('.lng_opt-open'),
+        timeLang = document.querySelectorAll('.time'),
+        titleGallery = document.querySelectorAll('.lng_opt-section-name'),
+        promoTitle = document.querySelectorAll('.lng_opt-promotion'),
+        promoTextLang = document.querySelectorAll('.promo_info'),
+        aboutList = document.querySelectorAll('.about_list'),
+        more = document.querySelectorAll('.more'),
+        aboutFooter = document.querySelectorAll('.lng_opt-about'),
+        footerInfo = document.querySelectorAll('.footer-about-info');
+
+    let langNonActive = (b, name_box, z) =>{
+        for(let i = b; i < name_box.length; i++){
+            name_box[i].classList.remove(z);
+        }
+    };
+    
+    let langActive = (a, name_box, z) => {
+        name_box[a].classList.add(z);
+    };
+
+    for(let i=0; i < selectLang.length; i++){
+
+        let k=i;
+        selectLang[i].addEventListener('click', ()=>{
+            //---------#### Header ####--------------//
+            // Selector of languages
+            langNonActive(0, iconLang, 'active_select'); 
+            langActive(k, iconLang, 'active_select');
+
+            langNonActive(0, lang, 'active'); 
+            langActive(k, lang, 'active');
+
+            // Navigation menu
+            langNonActive(0, navLanguage, 'active'); 
+            langActive(k, navLanguage, 'active');
+
+            // Address
+            langNonActive(0, address, 'active'); 
+            langActive(k, address, 'active');
+
+            // Phone
+            langNonActive(0, phoneLang, 'active'); 
+            langActive(k, phoneLang, 'active');
+
+            // Open/close time
+            langNonActive(0, openLang, 'active'); 
+            langActive(k, openLang, 'active');
+
+            langNonActive(0, timeLang, 'active'); 
+            langActive(k, timeLang, 'active');
+            //------------##### End of Header ##### --------//
+
+            //-----------##### Gallery ##### ------------//
+            // Title of gallery
+            langNonActive(0, titleGallery, 'active'); 
+            langActive(k, titleGallery, 'active');
+            //----------##### End of Gallery ####--------//
+
+            //----------##### Promotions #####----------//
+            //Title of Promotions
+            langNonActive(0, promoTitle, 'active'); 
+            langActive(k, promoTitle, 'active');
+
+            //Text of promotions
+            langNonActive(0, promoTextLang, 'active'); 
+            langActive(k, promoTextLang, 'active');
+
+            //---------##### About #####---------------//
+            //Text about us
+            langNonActive(0, aboutList, 'active'); 
+            langActive(k, aboutList, 'active');
+
+            //Telephone about box
+            langNonActive(0, more, 'active'); 
+            langActive(k, more, 'active');
+
+            //-------##### Footer #####--------------//
+            //Title of Footer about
+            langNonActive(0, aboutFooter, 'active'); 
+            langActive(k, aboutFooter, 'active');
+
+            //Footer about  info text
+            langNonActive(0, footerInfo, 'active'); 
+            langActive(k, footerInfo, 'active');
+
+        });
+       
+    }
+}
+
+/***/ }),
+
+/***/ "./src/parts/scroll_page.js":
+/*!**********************************!*\
+  !*** ./src/parts/scroll_page.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scrollPage; });
+function scrollPage(){
+
+    let gallery = document.querySelectorAll('.gallery_scroll'),
+        promotion = document.querySelectorAll('.promo_scroll'),
+        arrowUp = document.querySelectorAll('.up-box'),
+        aboutUs = document.querySelectorAll('.about_us'),
+        isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification),
+        isIE = /*@cc_on!@*/ false || !!document.documentMode,
+        isEdge = !isIE && !!window.StyleMedia;
+
+        function scrollBox (name, k) {
+            name.forEach(function(item){
+        
+                item.addEventListener('click', function(e){
+                    
+                    e.preventDefault();
+                    let id = item.getAttribute('href'),
+                        blockTop = document.querySelector(id).offsetTop + k;
+                
+                    window.scrollTo({
+                        top: blockTop,
+                        behavior: 'smooth'
+                    });
+                });
+        
+            });
+        }
+        
+            if(!isIE){
+                scrollBox(gallery, 490);
+                scrollBox(promotion, 980);
+                scrollBox(arrowUp, -25);
+                scrollBox(aboutUs, 980);
+            }
+
+        //--------------Function of showing or hidding arrow "Up"---------// 
+
+            window.addEventListener('scroll', () =>{
+
+                arrowUp.forEach(function(item){
+
+                    if(document.documentElement.scrollTop > 220){
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+
+                });
+                
+            });
+        //------------- End of function show/hide "Up" --------------//
+
+}
+
+/***/ }),
+
+/***/ "./src/parts/slider.js":
+/*!*****************************!*\
+  !*** ./src/parts/slider.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return slider; });
+function slider(){
+
+    console.log("slider OK");
+
+    let slides = document.querySelectorAll('.slider-link'),
+        prev = document.querySelector('.left_arrow'),
+        next = document.querySelector('.right_arrow'),
+        slideIndex = 1;
+
+    showSlides(slideIndex);
+
+    function showSlides(n){
+        if(n > slides.length){
+            slideIndex = 1;
+        }
+
+        if(n < 1){
+            slideIndex = slides.length;
+        }
+
+        slides.forEach((item) => item.style.display = 'none');
+
+        slides[slideIndex - 1].style.display = 'block'; //wyświetla się przy załadowaniu strony
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    prev.addEventListener('click', function() {
+        plusSlides(-1);
+        console.log("prev");
+    });
+
+    next.addEventListener('click', function() {
+        plusSlides(1);
+    });
+}
+
+/***/ }),
+
+/***/ "./src/parts/slidezoom.js":
+/*!********************************!*\
+  !*** ./src/parts/slidezoom.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return slideZoom; });
+function slideZoom(){
+    console.log('SlideZoom OK');
+
+    let sliderBox = document.querySelector('.slider'),
+        zoomImage = document.querySelectorAll('.slider-link'),
+        sliderImg = document.querySelectorAll('.slider-img'),
+        dark = document.createElement('div'),
+        img = document.createElement('img'),
+        step = 3,
+        k;
+        
+
+        img.style.cssText = 'display:flex;\
+                            align-items: center;\
+                            justify-content: center;\
+                            margin: auto;\
+                            z-index: 10; \
+                            display: none;\
+                            border-radius: 18px';
+
+        dark.style.cssText = 'position: fixed;\
+                                top: 0; \
+                                left: 0; \
+                                align-items: center;\
+                                justify-content: center;\
+                                width: 100%; \
+                                height: 100%; \
+                                z-index: 9; \
+                                display: none;\
+                                background-color: rgba(0, 0, 0, 0.5);';
+        document.body.appendChild(dark);
+        dark.appendChild(img);
+        dark.classList.add('dark');
+
+        // console.log(document.documentElement.clientWidth);
+        // console.log(k);
+
+        function stepNumber(start, stop, step){
+            setInterval(function(){
+                if(start < stop){
+                    start += step;
+                
+                        img.style.height = `${start}px`;
+                }
+            }, 2);
+        }
+
+        // function slideZoom(z) {
+        //     for (let i = 0; i < zoomImage.length; i++) {
+        //         if (target == sliderImg[i]) {
+        //             img.src = zoomImage[i].getAttribute('href');
+        //             dark.style.display = 'flex';
+        //             img.style.display = 'flex';
+                    
+        //             setTimeout(function(){
+        //                 stepNumber(0, k, step);
+        //             }, 250);
+
+        //             img.classList.add(z);
+        //             img.classList.add('locked');
+        //             break;
+        //         }
+        //     }
+        // }
+
+
+        sliderBox.addEventListener('click', (event) => {
+            event.preventDefault();
+            let target = event.target;
+           
+            if (target && target.classList.contains('slider-img')) {
+
+                function slideZoom(z) {
+                    for (let i = 0; i < zoomImage.length; i++) {
+                        if (target == sliderImg[i]) {
+                            img.src = zoomImage[i].getAttribute('href');
+                            dark.style.display = 'flex';
+                            img.style.display = 'flex';
+                            
+                            setTimeout(function(){
+                                stepNumber(0, k, step);
+                            }, 250);
+
+                            img.classList.add(z);
+                            img.classList.add('locked');
+                            break;
+                        }
+                    }
+                }
+
+                if(document.documentElement.clientWidth < 550){
+                    k = document.documentElement.clientWidth * 0.72791318;
+                    slideZoom('zoom_mobile');
+                } else {
+                    k = document.documentElement.clientWidth * 0.42791318;
+                    slideZoom('zoom');
+                }
+                
+            }
+        });
+
+        dark.addEventListener('click', (event) => {
+            let target = event.target;
+            if (target && target.classList.contains('dark') || target.classList.contains('zoom')) {
+                dark.style.display = 'none';
+                img.style.display = 'none';
+                img.classList.remove('zoom');
+                img.classList.remove('locked');
+                img.style.height = '0px';
+            }
+        });
+    
+       
+} 
+
+/***/ }),
+
+/***/ "./src/parts/timer.js":
+/*!****************************!*\
+  !*** ./src/parts/timer.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return timerEvent; });
+function timerEvent() {
+    let events = document.querySelectorAll('.event'),
+        close = document.querySelectorAll('.close-events'),
+        asideMask = document.querySelector('.aside-mask'),
+        eventsBox = document.querySelector('.events'),
+        step = 1,
+        timerIndex = 0,
+        days_d = document.getElementById('days'),
+        hours_d = document.getElementById('hours'),
+        minutes_d = document.getElementById('minutes'),
+        seconds_d = document.getElementById('seconds'),
+        dateX = '2019-09-01T09:00:00';
+
+
+
+    events.forEach((item) =>
+        item.addEventListener('click', function () {
+            eventsBox.style.display = 'flex';
+            asideMask.style.display = 'flex';
+
+        setTimeout(function(){
+
+                let deadline = dateX,
+                getTimeRemaining = (endtime) => {
+                    let t = Date.parse(endtime) - Date.parse(new Date()),
+                        seconds = Math.floor((t / 1000) % 60),
+                        minutes = Math.floor((t / 1000 / 60) % 60),
+                        hours = Math.floor((t / 1000 / 60 / 60) % 24),
+                        days = Math.floor((t / (1000 * 60 * 60 * 24)));
+
+                    return {
+                        'total': t,
+                        'days': days,
+                        'hours': hours,
+                        'minutes': minutes,
+                        'seconds': seconds
+                    };
+                };
+
+            function setClock(endtime) {
+                let days = document.getElementById('days'),
+                    hours = document.getElementById('hours'),
+                    minutes = document.getElementById('minutes'),
+                    seconds = document.getElementById('seconds'),
+                    timeInterval = setInterval(updateClock, 1000);
+
+                function updateClock() {
+                    let t = getTimeRemaining(endtime);
+                    days.textContent = t.days;
+                    hours.textContent = t.hours;
+                    minutes.textContent = t.minutes;
+                    seconds.textContent = t.seconds;
+
+                    if (hours.textContent.length < 2) {
+                        hours.textContent = '0' + t.hours;
+                    }
+                    if (minutes.textContent.length < 2) {
+                        minutes.textContent = '0' + t.minutes;
+                    }
+                    if (seconds.textContent.length < 2) {
+                        seconds.textContent = '0' + t.seconds;
+                    }
+                    if (t.total <= 0) {
+                        clearInterval(timeInterval);
+                        days.textContent = '00';
+                        hours.textContent = '00';
+                        minutes.textContent = '00';
+                        seconds.textContent = '00';
+                    }
+
+                }
+            }
+            setClock(deadline);
+            
+
+            }, 4000);
+
+            
+            let t = Date.parse(dateX) - Date.parse(new Date()),
+                seconds = Math.floor((t / 1000) % 60),
+                minutes = Math.floor((t / 1000 / 60) % 60),
+                hours = Math.floor((t / 1000 / 60 / 60) % 24),
+                days = Math.floor((t / (1000 * 60 * 60 * 24)));
+    
+        function timeoutTimerStep (start, stop, step, times, k){
+            setTimeout(function(){
+
+                function stepNumber() {
+                    setInterval(function () {
+                        if (start < stop) {
+                            start += step;
+                            
+                            if(times == seconds_d && start >= 4){
+                                times.textContent = (`0${start-4}`).slice(-2);
+                            }else{
+                                times.textContent = (`0${start}`).slice(-2);
+                            }
+                            
+                        }
+                    }, 20);
+                }
+                
+                times.textContent = (`0${start}`).slice(-2);
+
+                stepNumber();
+            }, k);
+
+            timerIndex = 1;
+            return timerIndex;
+
+        }
+    
+        if(timerIndex == 0) {
+            timeoutTimerStep(0, days, step, days_d, 2000);
+            timeoutTimerStep(0, hours, step, hours_d, 2700);
+            timeoutTimerStep(0, minutes, step, minutes_d, 3400);
+            timeoutTimerStep(0, seconds, step, seconds_d, 4100);
+        }
+        
+    
+        })
+    );
+
+    close.forEach((item) =>
+
+    item.addEventListener('click', function () {
+        eventsBox.classList.add('close-event');
+        asideMask.classList.add('close-event');
+
+        setTimeout(function () {
+            eventsBox.style.display = 'none';
+            asideMask.style.display = 'none';
+            eventsBox.classList.remove('close-event');
+            asideMask.classList.remove('close-event');
+        }, 1200);
+
+        // days_d.textContent = '--';
+        // hours_d.textContent = '--';
+        // minutes_d.textContent = '--';
+        // seconds_d.textContent = '--';
+
+    })
+
+    );
+    
+
+}
+
+/***/ })
+
+/******/ });
 //# sourceMappingURL=bundle.js.map

@@ -782,7 +782,7 @@ header {
 }
 
 .zoom_mobile {
-  width: 87%;
+  width: 92%;
   height: 0;
   -webkit-box-shadow: 0px 0px 8px 4px #ad7101;
           box-shadow: 0px 0px 8px 4px #ad7101;
@@ -1906,6 +1906,7 @@ header {
 @media (max-width: 680px) {
   .info-text {
     display: none;
+    text-align: end;
   }
   .hide_menu {
     top: 90px;
@@ -1996,6 +1997,9 @@ header {
     top: 19px;
     right: 19px;
   }
+  .address_span {
+    display: contents;
+  }
 }
 
 @media (max-width: 490px) {
@@ -2029,9 +2033,13 @@ header {
     right: 6%;
   }
   .phone {
-    -webkit-box-pack: normal;
-        -ms-flex-pack: normal;
-            justify-content: normal;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-left: -16px;
+  }
+  .address {
+    margin-left: -16px;
   }
   .tel_rus {
     font-size: 11px;
@@ -2086,7 +2094,10 @@ header {
 @media (max-width: 400px) {
   .phone {
     width: 108%;
-    margin-left: -15px;
+    margin-left: -18px;
+  }
+  .address {
+    margin-left: -8px;
   }
   .tel_rus {
     margin-left: -5px;
@@ -2162,7 +2173,10 @@ header {
   }
   .phone {
     width: 135%;
-    margin-left: -26px;
+    margin-left: -43px;
+  }
+  .address {
+    margin-left: -14px;
   }
   .lng_opt-section-name, .lng_opt-promotion, .lng_opt-about {
     font-size: 29px;
