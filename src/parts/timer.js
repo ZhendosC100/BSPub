@@ -9,7 +9,7 @@ export default function timerEvent() {
         hours_d = document.getElementById('hours'),
         minutes_d = document.getElementById('minutes'),
         seconds_d = document.getElementById('seconds'),
-        dateX = '2019-09-01T09:00:00';
+        dateX = '2019-09-25T09:00:00';
 
 
 

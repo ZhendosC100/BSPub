@@ -40,8 +40,10 @@ export default function language(){
             langActive(k, lang, 'active');
 
             // Navigation menu
-            langNonActive(0, navLanguage, 'active'); 
-            langActive(k, navLanguage, 'active');
+            // langNonActive(0, navLanguage, 'active'); 
+            // langActive(k, navLanguage, 'active');
+            langNonActive(0, navLanguage, 'active_hidden_menu'); 
+            langActive(k, navLanguage, 'active_hidden_menu');
 
             // Address
             langNonActive(0, address, 'active'); 

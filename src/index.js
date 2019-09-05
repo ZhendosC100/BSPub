@@ -6,6 +6,7 @@ import scrollPage from './parts/scroll_page';
 import timerEvent from './parts/timer';
 import aboutAside from './parts/about';
 import hideMenu from './parts/hidden_menu';
+import logo_link from './parts/logo_link';
 
 window.addEventListener('DOMContentLoaded', () =>{
     'use strict';
@@ -18,5 +19,6 @@ window.addEventListener('DOMContentLoaded', () =>{
     timerEvent();
     aboutAside();
     hideMenu();
+    logo_link();
 
 });

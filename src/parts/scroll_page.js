@@ -6,7 +6,10 @@ export default function scrollPage(){
         aboutUs = document.querySelectorAll('.about_us'),
         isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification),
         isIE = /*@cc_on!@*/false || !!document.documentMode,
-        isEdge = !isIE && !!window.StyleMedia;
+        isEdge = !isIE && !!window.StyleMedia,
+        cWidth = document.documentElement.clientWidth;
+
+        
 
         function scrollBox (name, k) {
             name.forEach(function(item){
@@ -33,6 +36,9 @@ export default function scrollPage(){
                 scrollBox(aboutUs, 980);
             }
 
+            
+            // if 
+            
         //--------------Function of showing or hidding arrow "Up"---------// 
 
             window.addEventListener('scroll', () =>{

@@ -103,6 +103,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _parts_timer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./parts/timer */ "./src/parts/timer.js");
 /* harmony import */ var _parts_about__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./parts/about */ "./src/parts/about.js");
 /* harmony import */ var _parts_hidden_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./parts/hidden_menu */ "./src/parts/hidden_menu.js");
+/* harmony import */ var _parts_logo_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./parts/logo_link */ "./src/parts/logo_link.js");
+
 
 
 
@@ -123,6 +125,7 @@ window.addEventListener('DOMContentLoaded', () =>{
     Object(_parts_timer__WEBPACK_IMPORTED_MODULE_5__["default"])();
     Object(_parts_about__WEBPACK_IMPORTED_MODULE_6__["default"])();
     Object(_parts_hidden_menu__WEBPACK_IMPORTED_MODULE_7__["default"])();
+    Object(_parts_logo_link__WEBPACK_IMPORTED_MODULE_8__["default"])();
 
 });
 
@@ -237,20 +240,111 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hideMenu; });
 function hideMenu(){
 
-    let navLang = document.querySelector('.nav-lang'),
+    let navLang,
         hiddenMenu = document.querySelector('.hide_menu'),
-        cWidth = document.documentElement.clientWidth,
+        navText = document.querySelectorAll('.nav_text'),
+        logoBox = document.querySelector('.logo_box'),
+        body = document.body,
+        cWidth,
         k = false;
-    hiddenMenu.addEventListener('click', () => {
 
+    const showHiddenMenu = function(){
+        navLang = document.querySelector('.active_hidden_menu');
+        navLang.style.display = 'flex';
+        logoBox.style.zIndex = '-1';
+        k = true;
+    };
+    const hideHiddenMenu = function(){
+        navLang = document.querySelector('.active_hidden_menu');
+        navLang.style.display = 'none';
+        logoBox.style.zIndex = '2';
+        k = false;
+    };
+
+    hiddenMenu.addEventListener('click', () => {
+        
         if (k){
-            navLang.style.display = 'none';
-            k = false;
+
+            hideHiddenMenu();
+
         } else {
-            navLang.style.display = 'flex';
-            k = true;
+
+            showHiddenMenu();
         }
     });
+
+
+    navText.forEach((item) => {
+        item.addEventListener('click', (e)=>{
+            let target = e.target;
+                cWidth = document.documentElement.clientWidth;
+
+            if(cWidth < 977 && target.classList.contains('nav_text')){
+                
+                hideHiddenMenu();
+            }
+        });
+
+        
+        body.addEventListener('click', (e) => {
+            let target = e.target,
+                hideBoolean;
+                cWidth = document.documentElement.clientWidth;
+                navLang = document.querySelector('.active_hidden_menu');
+                target = target.closest('.hide_menu');
+
+                if(target){
+                    hideBoolean = true;
+                }else{
+                    hideBoolean = false;
+                }
+
+                target = e.target;
+            if(cWidth < 977 && target.classList.contains('nav_text') !== true && !hideBoolean || target.classList.contains('shine-icon')){
+                    
+                hideHiddenMenu();
+            }
+    
+        });
+
+        
+        
+    });
+
+    // var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        
+
+        let browserGhanger = function(){
+            let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor),
+                addressSpan = document.querySelector('.address_span');
+
+            if(isSafari){
+                addressSpan.style.textDecoration = 'none';
+            }
+        };
+
+        browserGhanger();
+
+        // убирает выделение DOM элемента
+        let hideMenuImg = document.querySelector('.hide_menu__img'),
+            linkSs = document.querySelectorAll('.link_ss');
+
+        function disableSelection(target){
+            if (typeof target.onselectstart!="undefined") // if IE
+                target.onselectstart=function(){return false}
+            else if (typeof target.style.MozUserSelect!="undefined") // if Firefox
+                target.style.MozUserSelect="none";
+            else // others
+                target.onmousedown=function(){return false;}
+        
+            target.style.cursor = "default";
+        }
+        
+        disableSelection(hiddenMenu);
+
+        linkSs.forEach((item) => {
+            disableSelection(item);
+        });
 
 }
 
@@ -308,8 +402,10 @@ function language(){
             langActive(k, lang, 'active');
 
             // Navigation menu
-            langNonActive(0, navLanguage, 'active'); 
-            langActive(k, navLanguage, 'active');
+            // langNonActive(0, navLanguage, 'active'); 
+            // langActive(k, navLanguage, 'active');
+            langNonActive(0, navLanguage, 'active_hidden_menu'); 
+            langActive(k, navLanguage, 'active_hidden_menu');
 
             // Address
             langNonActive(0, address, 'active'); 
@@ -367,6 +463,34 @@ function language(){
 
 /***/ }),
 
+/***/ "./src/parts/logo_link.js":
+/*!********************************!*\
+  !*** ./src/parts/logo_link.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return logo_link; });
+function logo_link (){
+
+    let logoClick = document.querySelector('.logo_box__img'),
+    body = document.querySelector('body');
+
+    body.addEventListener('click', (e)=> {
+        let target = e.target;
+    });
+    
+    logoClick.addEventListener('click', ()=>{
+        location.href="https://www.google.com/maps/place/K%C4%99pna+15,+00-001+Warszawa/@52.250727,21.0360703,17z/data=!3m1!4b1!4m5!3m4!1s0x471ecc465d3f1c23:0xac304d6fece44071!8m2!3d52.250727!4d21.038259";
+        
+    });
+
+}
+
+/***/ }),
+
 /***/ "./src/parts/scroll_page.js":
 /*!**********************************!*\
   !*** ./src/parts/scroll_page.js ***!
@@ -385,7 +509,10 @@ function scrollPage(){
         aboutUs = document.querySelectorAll('.about_us'),
         isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification),
         isIE = /*@cc_on!@*/ false || !!document.documentMode,
-        isEdge = !isIE && !!window.StyleMedia;
+        isEdge = !isIE && !!window.StyleMedia,
+        cWidth = document.documentElement.clientWidth;
+
+        
 
         function scrollBox (name, k) {
             name.forEach(function(item){
@@ -412,6 +539,9 @@ function scrollPage(){
                 scrollBox(aboutUs, 980);
             }
 
+            
+            // if 
+            
         //--------------Function of showing or hidding arrow "Up"---------// 
 
             window.addEventListener('scroll', () =>{
@@ -597,10 +727,14 @@ function slideZoom(){
 
         dark.addEventListener('click', (event) => {
             let target = event.target;
-            if (target && target.classList.contains('dark') || target.classList.contains('zoom')) {
+            if (target && target.classList.contains('dark') || target.classList.contains('zoom') || target.classList.contains('zoom_mobile') ) {
                 dark.style.display = 'none';
                 img.style.display = 'none';
-                img.classList.remove('zoom');
+                if(img.classList.contains('zoom')){
+                    img.classList.remove('zoom');
+                }else if(img.classList.contains('zoom_mobile')){
+                    img.classList.remove('zoom_mobile');
+                }
                 img.classList.remove('locked');
                 img.style.height = '0px';
             }
@@ -632,7 +766,7 @@ function timerEvent() {
         hours_d = document.getElementById('hours'),
         minutes_d = document.getElementById('minutes'),
         seconds_d = document.getElementById('seconds'),
-        dateX = '2019-09-01T09:00:00';
+        dateX = '2019-09-25T09:00:00';
 
 
 

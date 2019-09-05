@@ -101,10 +101,14 @@ export default function slideZoom(){
 
         dark.addEventListener('click', (event) => {
             let target = event.target;
-            if (target && target.classList.contains('dark') || target.classList.contains('zoom')) {
+            if (target && target.classList.contains('dark') || target.classList.contains('zoom') || target.classList.contains('zoom_mobile') ) {
                 dark.style.display = 'none';
                 img.style.display = 'none';
-                img.classList.remove('zoom');
+                if(img.classList.contains('zoom')){
+                    img.classList.remove('zoom');
+                }else if(img.classList.contains('zoom_mobile')){
+                    img.classList.remove('zoom_mobile');
+                }
                 img.classList.remove('locked');
                 img.style.height = '0px';
             }
