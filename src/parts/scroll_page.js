@@ -7,7 +7,8 @@ export default function scrollPage(){
         isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification),
         isIE = /*@cc_on!@*/false || !!document.documentMode,
         isEdge = !isIE && !!window.StyleMedia,
-        cWidth = document.documentElement.clientWidth;
+        cWidth = document.documentElement.clientWidth,
+        cHeight;
 
         
 
@@ -29,9 +30,14 @@ export default function scrollPage(){
             });
         }
         
-            if(!isIE){
+            if(!isIE && cWidth > 490){
                 scrollBox(gallery, 490);
                 scrollBox(promotion, 980);
+                scrollBox(arrowUp, -25);
+                scrollBox(aboutUs, 980);
+            }else if(!isIE && cWidth <= 490 ){
+                scrollBox(gallery, 400);
+                scrollBox(promotion, 870);
                 scrollBox(arrowUp, -25);
                 scrollBox(aboutUs, 980);
             }
@@ -41,7 +47,11 @@ export default function scrollPage(){
             
         //--------------Function of showing or hidding arrow "Up"---------// 
 
+            let upBox = document.querySelector('.up-box');
+
+            
             window.addEventListener('scroll', () =>{
+                cHeight = document.documentElement.clientHeight;
 
                 arrowUp.forEach(function(item){
 
@@ -50,10 +60,16 @@ export default function scrollPage(){
                     } else {
                         item.classList.remove('active');
                     }
-
                 });
+
+                if(cHeight > 700){
+                    upBox.style.bottom = '71px';
+                }else{
+                    upBox.style.bottom = '21px';
+                }
+                console.log(cHeight);
                 
             });
         //------------- End of function show/hide "Up" --------------//
-
+        
 }

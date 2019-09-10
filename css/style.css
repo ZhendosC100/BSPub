@@ -78,6 +78,52 @@
   }
 }
 
+@-webkit-keyframes light-logo {
+  0% {
+    -webkit-box-shadow: 0 0 20px 5px #cda100;
+            box-shadow: 0 0 20px 5px #cda100;
+    background: #cda100a6;
+  }
+  15% {
+    -webkit-box-shadow: 0 0 8px 3px #efeab7bf;
+            box-shadow: 0 0 8px 3px #efeab7bf;
+    background: #efeab7bf;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 8px 3px #efeab7bf;
+            box-shadow: 0 0 8px 3px #efeab7bf;
+    background: #efeab7bf;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 20px 5px #cda100;
+            box-shadow: 0 0 20px 5px #cda100;
+    background: #cda100a6;
+  }
+}
+
+@keyframes light-logo {
+  0% {
+    -webkit-box-shadow: 0 0 20px 5px #cda100;
+            box-shadow: 0 0 20px 5px #cda100;
+    background: #cda100a6;
+  }
+  15% {
+    -webkit-box-shadow: 0 0 8px 3px #efeab7bf;
+            box-shadow: 0 0 8px 3px #efeab7bf;
+    background: #efeab7bf;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 8px 3px #efeab7bf;
+            box-shadow: 0 0 8px 3px #efeab7bf;
+    background: #efeab7bf;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 20px 5px #cda100;
+            box-shadow: 0 0 20px 5px #cda100;
+    background: #cda100a6;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -262,6 +308,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 62px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -274,7 +321,12 @@ header {
   background: #cda100a6;
   -webkit-box-shadow: 0 0 20px 5px #cda100;
           box-shadow: 0 0 20px 5px #cda100;
-  margin-left: 62px;
+  -webkit-animation: light-logo;
+          animation: light-logo;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .logo_box__img:before {
@@ -1720,6 +1772,15 @@ header {
   }
 }
 
+@media (max-width: 930px) {
+  .info-text {
+    width: 37%;
+  }
+  .open_time_rus {
+    font-size: 45px;
+  }
+}
+
 @media (max-width: 920px) {
   .ss_box {
     position: absolute;
@@ -1777,6 +1838,10 @@ header {
   .lng_opt-section-name, .lng_opt-promotion, .lng_opt-about {
     font-size: 32px;
   }
+  .ru-gallery {
+    font-size: 48px;
+    margin: -11px 0px -50px 0px;
+  }
   .gold, .gold_left {
     width: 74px;
   }
@@ -1830,6 +1895,9 @@ header {
   }
   .lng_opt-section-name, .lng_opt-promotion, .lng_opt-about {
     font-size: 40px;
+  }
+  .ru-gallery {
+    font-size: 50px;
   }
   .gold, .gold_left {
     width: 160px;
@@ -2005,6 +2073,11 @@ header {
   .more > a {
     font-size: 18px;
   }
+  .more_rus {
+    bottom: 5px;
+    right: 9px;
+    font-size: 18px;
+  }
   .close-events {
     top: 19px;
     right: 19px;
@@ -2103,10 +2176,10 @@ header {
     margin-bottom: 103px;
   }
   .left_arrow {
-    left: 18px;
+    left: 12px;
   }
   .right_arrow {
-    right: -90px;
+    right: -83px;
   }
   .promo-volume {
     top: 28px;
@@ -2115,6 +2188,13 @@ header {
   }
   .promo_info {
     font-size: 16px;
+  }
+  .about {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .about_list__rus > p {
+    font-size: 23px;
   }
   .lng_opt-about {
     margin-top: 0;

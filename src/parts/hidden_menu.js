@@ -14,12 +14,17 @@ export default function hideMenu(){
         engLang = document.querySelector('.eng-lang'); //hideIndex: 2
 
     langIcon.forEach((item) => {
-        item.addEventListener('click', (e)=>{
-
-            navLang = document.querySelector('.active_hidden_menu');
-            plLang.style.display = 'none';
-            rusLang.style.display = 'none';
-            // engLang.style.display = 'none';
+        item.addEventListener('click', ()=>{
+            cWidth = document.documentElement.clientWidth;
+            if(cWidth < 977) {
+                navLang = document.querySelector('.active_hidden_menu');
+                plLang.style.display = 'none';
+                rusLang.style.display = 'none';
+                // engLang.style.display = 'none';
+            }
+                
+            
+            
         });
     });
     
@@ -76,7 +81,7 @@ export default function hideMenu(){
                 }
 
                 target = e.target;
-            if(cWidth < 977 && target.classList.contains('nav_text') !== true && !hideBoolean || target.classList.contains('shine-icon')){
+            if(cWidth < 977 && target.classList.contains('nav_text') !== true && !hideBoolean){
                     
                 hideHiddenMenu();
             }
@@ -115,7 +120,7 @@ export default function hideMenu(){
             else if (typeof target.style.MozUserSelect!="undefined") // if Firefox
                 target.style.MozUserSelect="none";
             else // others
-                target.onmousedown=function(){return false;}
+                target.onmousedown=function(){return false;};
         
             target.style.cursor = "default";
         }

@@ -254,12 +254,17 @@ function hideMenu(){
         engLang = document.querySelector('.eng-lang'); //hideIndex: 2
 
     langIcon.forEach((item) => {
-        item.addEventListener('click', (e)=>{
-
-            navLang = document.querySelector('.active_hidden_menu');
-            plLang.style.display = 'none';
-            rusLang.style.display = 'none';
-            // engLang.style.display = 'none';
+        item.addEventListener('click', ()=>{
+            cWidth = document.documentElement.clientWidth;
+            if(cWidth < 977) {
+                navLang = document.querySelector('.active_hidden_menu');
+                plLang.style.display = 'none';
+                rusLang.style.display = 'none';
+                // engLang.style.display = 'none';
+            }
+                
+            
+            
         });
     });
     
@@ -316,7 +321,7 @@ function hideMenu(){
                 }
 
                 target = e.target;
-            if(cWidth < 977 && target.classList.contains('nav_text') !== true && !hideBoolean || target.classList.contains('shine-icon')){
+            if(cWidth < 977 && target.classList.contains('nav_text') !== true && !hideBoolean){
                     
                 hideHiddenMenu();
             }
@@ -355,7 +360,7 @@ function hideMenu(){
             else if (typeof target.style.MozUserSelect!="undefined") // if Firefox
                 target.style.MozUserSelect="none";
             else // others
-                target.onmousedown=function(){return false;}
+                target.onmousedown=function(){return false;};
         
             target.style.cursor = "default";
         }
@@ -495,12 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return logo_link; });
 function logo_link (){
 
-    let logoClick = document.querySelector('.logo_box__img'),
-    body = document.querySelector('body');
-
-    body.addEventListener('click', (e)=> {
-        let target = e.target;
-    });
+    let logoClick = document.querySelector('.logo_box__img');
     
     logoClick.addEventListener('click', ()=>{
         location.href="https://www.google.com/maps/place/K%C4%99pna+15,+00-001+Warszawa/@52.250727,21.0360703,17z/data=!3m1!4b1!4m5!3m4!1s0x471ecc465d3f1c23:0xac304d6fece44071!8m2!3d52.250727!4d21.038259";
@@ -530,7 +530,8 @@ function scrollPage(){
         isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification),
         isIE = /*@cc_on!@*/ false || !!document.documentMode,
         isEdge = !isIE && !!window.StyleMedia,
-        cWidth = document.documentElement.clientWidth;
+        cWidth = document.documentElement.clientWidth,
+        cHeight;
 
         
 
@@ -552,9 +553,14 @@ function scrollPage(){
             });
         }
         
-            if(!isIE){
+            if(!isIE && cWidth > 490){
                 scrollBox(gallery, 490);
                 scrollBox(promotion, 980);
+                scrollBox(arrowUp, -25);
+                scrollBox(aboutUs, 980);
+            }else if(!isIE && cWidth <= 490 ){
+                scrollBox(gallery, 400);
+                scrollBox(promotion, 870);
                 scrollBox(arrowUp, -25);
                 scrollBox(aboutUs, 980);
             }
@@ -564,7 +570,11 @@ function scrollPage(){
             
         //--------------Function of showing or hidding arrow "Up"---------// 
 
+            let upBox = document.querySelector('.up-box');
+
+            
             window.addEventListener('scroll', () =>{
+                cHeight = document.documentElement.clientHeight;
 
                 arrowUp.forEach(function(item){
 
@@ -573,12 +583,18 @@ function scrollPage(){
                     } else {
                         item.classList.remove('active');
                     }
-
                 });
+
+                if(cHeight > 700){
+                    upBox.style.bottom = '71px';
+                }else{
+                    upBox.style.bottom = '21px';
+                }
+                console.log(cHeight);
                 
             });
         //------------- End of function show/hide "Up" --------------//
-
+        
 }
 
 /***/ }),

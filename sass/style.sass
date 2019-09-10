@@ -24,6 +24,21 @@
     to
         transform: translateX(10em) skew(-45deg)
 
+@keyframes light-logo
+    0%
+        box-shadow: 0 0 20px 5px #cda100
+        background: #cda100a6
+    15%
+        // box-shadow: 0 0 8px 3px #a26502
+        box-shadow: 0 0 8px 3px #efeab7bf
+        background: #efeab7bf
+    70%
+        // box-shadow: 0 0 8px 3px #cda1001a
+        box-shadow: 0 0 8px 3px #efeab7bf
+        background: #efeab7bf
+    100%
+        box-shadow: 0 0 20px 5px #cda100
+        background: #cda100a6
 
 @mixin on-animation
     animation-name: slide-on
@@ -171,6 +186,7 @@ header
     &__img
         position: relative
         display: flex
+        margin-left: 62px
         justify-content: center
         align-items: center
         width: 150px
@@ -178,7 +194,9 @@ header
         border-radius: 50%
         background: #cda100a6
         box-shadow: 0 0 20px 5px #cda100
-        margin-left: 62px
+        animation: light-logo
+        animation-duration: 3s
+        animation-iteration-count: infinite
         &:before
             content: ''
             position: absolute
