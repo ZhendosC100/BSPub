@@ -14,6 +14,8 @@ export default function language(){
         promoTextLang = document.querySelectorAll('.promo_info'),
         aboutList = document.querySelectorAll('.about_list'),
         more = document.querySelectorAll('.more'),
+        eventName = document.querySelectorAll('.event-name'),
+        eventInfo = document.querySelectorAll('.event-info'),
         aboutFooter = document.querySelectorAll('.lng_opt-about'),
         footerInfo = document.querySelectorAll('.footer-about-info');
 
@@ -93,6 +95,14 @@ export default function language(){
             //Footer about  info text
             langNonActive(0, footerInfo, 'active'); 
             langActive(k, footerInfo, 'active');
+            
+            //------##### Events #####-------------//
+            langNonActive(0, eventInfo, 'active'); 
+            langActive(k, eventInfo, 'active');
+
+            langNonActive(0, eventName, 'active'); 
+            langActive(k, eventName, 'active');
+            
 
         });
        

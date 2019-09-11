@@ -134,9 +134,9 @@
 body {
   z-index: 0;
   margin: 0;
-  background: url(../img/brick_016_min_3.jpg);
+  background: url(../img/brick_progressive.jpg);
   background-position: left center, right center;
-  background-size: 133% 113%;
+  background-size: 100% 66%;
 }
 
 .bg_box {
@@ -1257,6 +1257,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1272,6 +1273,10 @@ header {
 .event-name > span {
   display: block;
   width: 15px;
+}
+
+.event-info {
+  display: none;
 }
 
 .timer {
@@ -1523,6 +1528,10 @@ header {
 }
 
 @media (max-width: 1201px) {
+  body {
+    background-position: left top, right top;
+    background-size: 100%;
+  }
   .logo_box {
     width: 22%;
   }
@@ -1648,10 +1657,6 @@ header {
 }
 
 @media (max-width: 1001px) {
-  body {
-    background-position: left center, right center;
-    background-size: 226% 101%;
-  }
   .lang_box {
     margin-left: 15%;
   }
@@ -1876,9 +1881,6 @@ header {
 }
 
 @media (max-width: 820px) {
-  body {
-    background-size: 219% 70%;
-  }
   .cask,
   .promotion-img,
   .bg_text-2,
@@ -2103,10 +2105,6 @@ header {
 }
 
 @media (max-width: 490px) {
-  body {
-    background-position: top, left;
-    background-size: 219% 50%;
-  }
   .hide_menu {
     top: 32px;
     right: 18%;
