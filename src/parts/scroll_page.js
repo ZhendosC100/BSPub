@@ -67,9 +67,11 @@ export default function scrollPage(){
                 }else{
                     upBox.style.bottom = '21px';
                 }
-                console.log(cHeight);
+                
                 
             });
         //------------- End of function show/hide "Up" --------------//
-        
+        console.log(cWidth);
 }
+ 
+

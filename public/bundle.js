@@ -118,10 +118,11 @@ window.addEventListener('DOMContentLoaded', () =>{
     'use strict';
 
     Object(_parts_language__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    Object(_parts_scroll_page__WEBPACK_IMPORTED_MODULE_4__["default"])();
     Object(_parts_slider__WEBPACK_IMPORTED_MODULE_1__["default"])();
     Object(_parts_slidezoom__WEBPACK_IMPORTED_MODULE_2__["default"])();
     Object(_parts_download_off__WEBPACK_IMPORTED_MODULE_3__["default"])();
-    Object(_parts_scroll_page__WEBPACK_IMPORTED_MODULE_4__["default"])();
+    
     Object(_parts_timer__WEBPACK_IMPORTED_MODULE_5__["default"])();
     Object(_parts_about__WEBPACK_IMPORTED_MODULE_6__["default"])();
     Object(_parts_hidden_menu__WEBPACK_IMPORTED_MODULE_7__["default"])();
@@ -600,12 +601,15 @@ function scrollPage(){
                 }else{
                     upBox.style.bottom = '21px';
                 }
-                console.log(cHeight);
+                
                 
             });
         //------------- End of function show/hide "Up" --------------//
-        
+        console.log(cWidth);
 }
+ 
+
+
 
 /***/ }),
 
@@ -619,13 +623,25 @@ function scrollPage(){
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return slider; });
+/* harmony import */ var _swipe_func__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swipe_func */ "./src/parts/swipe_func.js");
+
+
+
+
+
 function slider(){
 
+    
+    _swipe_func__WEBPACK_IMPORTED_MODULE_0__["default"];
+    // getSupportedEvents();
+    // eventsUnify();
+    // swipe();
     console.log("slider OK");
 
     let slides = document.querySelectorAll('.slider-link'),
         prev = document.querySelector('.left_arrow'),
         next = document.querySelector('.right_arrow'),
+        cWidth = document.documentElement.clientWidth,
         slideIndex = 1;
 
     showSlides(slideIndex);
@@ -656,6 +672,15 @@ function slider(){
     next.addEventListener('click', function() {
         plusSlides(1);
     });
+
+    console.log(cWidth);
+    // slides.forEach((item) => {
+    //     swipe(item, { maxTime: 1000, minTime: 100, maxDist: 150,  minDist: 60 });
+
+    //     item.addEventListener("swipe", function() {
+    //         console.log(e.detail);
+    //       });
+    // });
 }
 
 /***/ }),
@@ -786,8 +811,89 @@ function slideZoom(){
             }
         });
     
+      
        
 } 
+
+/***/ }),
+
+/***/ "./src/parts/swipe_func.js":
+/*!*********************************!*\
+  !*** ./src/parts/swipe_func.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+    // swipe slide
+    let getSupportedEvents = function() {
+        let events, support = {
+          pointer: !!("PointerEvent" in window || (window.MSPointerEvent && window.navigator.msPointerEnabled)),
+          touch: !!(typeof window.orientation !== "undefined" || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || "ontouchstart" in window || navigator.msMaxTouchPoints || 'maxTouchPoints' in window.navigator > 1 || 'msMaxTouchPoints' in window.navigator > 1)
+        };
+        switch (true) {
+          case support.pointer:
+            events = {
+              type:   "pointer",
+              start:  "PointerDown",
+              move:   "PointerMove",
+              end:    "PointerUp",
+              cancel: "PointerCancel",
+              leave:  "PointerLeave"
+            };
+            // добавление префиксов для IE10
+            let ie10 = (window.navigator.msPointerEnabled && Function('/*@cc_on return document.documentMode===10@*/')());
+            for (let value in events) {
+              if (value === "type") continue;
+              events[value] = (ie10) ? "MS" + events[value] : events[value].toLowerCase();
+            }
+            break;
+          case support.touch:
+            events = {
+              type:   "touch",
+              start:  "touchstart",
+              move:   "touchmove",
+              end:    "touchend",
+              cancel: "touchcancel"
+            };
+            break;
+          default:
+            events = {
+              type:  "mouse",
+              start: "mousedown",
+              move:  "mousemove",
+              end:   "mouseup",
+              leave: "mouseleave"
+            };
+            break;
+        }
+        return events;
+      };
+      
+    //   /**
+    //   * Объединение событий mouse/pointer и touch.
+    //   * @param e {object} - принимает в качестве аргумента событие.
+    //   * @returns {TouchList|e} возвращает либо TouchList, либо оставляет событие без изменения.
+    //   */
+      let eventsUnify = function(e) {
+        return e.changedTouches ? e.changedTouches[0] : e;
+      };
+
+      // settings of swipe
+      let swipe = function(el, settingsSwipe) {
+        // default settings
+        let settings = Object.assign({}, {
+          minDist: 60,  // минимальная дистанция, которую должен пройти указатель, чтобы жест считался как свайп (px)
+          maxDist: 120, // максимальная дистанция, не превышая которую может пройти указатель, чтобы жест считался как свайп (px)
+          maxTime: 700, // максимальное время, за которое должен быть совершен свайп (ms)
+          minTime: 50   // минимальное время, за которое должен быть совершен свайп (ms)
+        }, settingsSwipe);
+      };
+      let consOk = console.log('swipe export ok');
+/* harmony default export */ __webpack_exports__["default"] = ({getSupportedEvents, eventsUnify, swipe, consOk});
 
 /***/ }),
 

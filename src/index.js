@@ -12,10 +12,11 @@ window.addEventListener('DOMContentLoaded', () =>{
     'use strict';
 
     language();
+    scrollPage();
     slider();
     slideZoom();
     downloadOff();
-    scrollPage();
+    
     timerEvent();
     aboutAside();
     hideMenu();
