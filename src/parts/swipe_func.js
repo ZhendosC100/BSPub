@@ -1,6 +1,6 @@
 
 
-    // swipe slide
+    // // swipe slide
     let getSupportedEvents = function() {
         let events, support = {
           pointer: !!("PointerEvent" in window || (window.MSPointerEvent && window.navigator.msPointerEnabled)),
@@ -64,5 +64,12 @@
           minTime: 50   // минимальное время, за которое должен быть совершен свайп (ms)
         }, settingsSwipe);
       };
-      let consOk = console.log('swipe export ok');
-export default {getSupportedEvents, eventsUnify, swipe, consOk}
+      let consOk = 'swipe export ok';
+      
+      let cWidth = document.documentElement.clientWidth;
+
+
+export default {cWidth, consOk}
+// export default function getSupportedEvents();
+// export default function eventsUnify();
+// export default function swipe();
