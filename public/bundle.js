@@ -638,7 +638,7 @@ function slider(){
     // getSupportedEvents();
     // eventsUnify();
     // // swipe();
-    console.log("slider OK");
+    // console.log("slider OK");
 
     let slides = document.querySelectorAll('.slider-link'),
         prev = document.querySelector('.left_arrow'),
@@ -675,9 +675,9 @@ function slider(){
         plusSlides(1);
     });
 
-    console.log(_swipe_func__WEBPACK_IMPORTED_MODULE_0__["default"]);
-    let ccWidth = _swipe_func__WEBPACK_IMPORTED_MODULE_0__["default"];
-    console.log(ccWidth.cWidth);
+    // console.log(consOk);
+    // let ccWidth = cWidth;
+    // console.log(ccWidth.cWidth);
 //     //swipe function//////////////////////////
 
 //         // // swipe slide
@@ -936,7 +936,7 @@ function slider(){
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return slideZoom; });
 function slideZoom(){
-    console.log('SlideZoom OK');
+    // console.log('SlideZoom OK');
 
     let sliderBox = document.querySelector('.slider'),
         zoomImage = document.querySelectorAll('.slider-link'),
@@ -1208,6 +1208,9 @@ function timerEvent() {
                     minutes.textContent = t.minutes;
                     seconds.textContent = t.seconds;
 
+                    if (days.textContent.length < 2) {
+                        days.textContent = '0' + t.days;
+                    }
                     if (hours.textContent.length < 2) {
                         hours.textContent = '0' + t.hours;
                     }
@@ -1217,6 +1220,7 @@ function timerEvent() {
                     if (seconds.textContent.length < 2) {
                         seconds.textContent = '0' + t.seconds;
                     }
+                    
                     if (t.total <= 0) {
                         clearInterval(timeInterval);
                         days.textContent = '00';

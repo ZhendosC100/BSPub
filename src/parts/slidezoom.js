@@ -1,5 +1,5 @@
 export default function slideZoom(){
-    console.log('SlideZoom OK');
+    // console.log('SlideZoom OK');
 
     let sliderBox = document.querySelector('.slider'),
         zoomImage = document.querySelectorAll('.slider-link'),

@@ -12,7 +12,7 @@ export default function slider(){
     // getSupportedEvents();
     // eventsUnify();
     // // swipe();
-    console.log("slider OK");
+    // console.log("slider OK");
 
     let slides = document.querySelectorAll('.slider-link'),
         prev = document.querySelector('.left_arrow'),
@@ -49,9 +49,9 @@ export default function slider(){
         plusSlides(1);
     });
 
-    console.log(consOk);
-    let ccWidth = cWidth;
-    console.log(ccWidth.cWidth);
+    // console.log(consOk);
+    // let ccWidth = cWidth;
+    // console.log(ccWidth.cWidth);
 //     //swipe function//////////////////////////
 
 //         // // swipe slide

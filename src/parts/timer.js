@@ -51,6 +51,9 @@ export default function timerEvent() {
                     minutes.textContent = t.minutes;
                     seconds.textContent = t.seconds;
 
+                    if (days.textContent.length < 2) {
+                        days.textContent = '0' + t.days;
+                    }
                     if (hours.textContent.length < 2) {
                         hours.textContent = '0' + t.hours;
                     }
@@ -60,6 +63,7 @@ export default function timerEvent() {
                     if (seconds.textContent.length < 2) {
                         seconds.textContent = '0' + t.seconds;
                     }
+                    
                     if (t.total <= 0) {
                         clearInterval(timeInterval);
                         days.textContent = '00';
