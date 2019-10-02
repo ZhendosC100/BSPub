@@ -936,7 +936,8 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   width: 56%;
-  height: 369px;
+  padding: 39px 0;
+  min-height: 369px;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.92);
   -webkit-box-shadow: inset 0px 0px 13px 1px #cda100;
@@ -1007,6 +1008,16 @@ header {
   color: #cda100;
   text-shadow: 0px 1px 2px white;
   font-size: 22px;
+}
+
+.promo_info > div {
+  margin: 25px 0;
+}
+
+.promo_info > div > p {
+  margin: 7px;
+  text-indent: 1em;
+  text-align: justify;
 }
 
 .promotion-img {
@@ -1083,7 +1094,7 @@ header {
 .cask-left {
   position: absolute;
   left: 49px;
-  top: 1589px;
+  top: calc(233%);
   width: 522px;
   z-index: -1;
 }
@@ -1098,8 +1109,9 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 20px 0;
   width: 56%;
-  height: 369px;
+  min-height: 369px;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.92);
   -webkit-box-shadow: inset 0px 0px 13px 1px #cda100;
@@ -1134,6 +1146,16 @@ header {
   color: #cda100;
   text-shadow: 0px 1px 2px white;
   font-size: 22px;
+}
+
+.footer-about-info > div {
+  margin: 25px 48px;
+}
+
+.footer-about-info > div > p {
+  margin: 7px;
+  text-indent: 1em;
+  text-align: justify;
 }
 
 .copyrights-box {
@@ -1386,10 +1408,20 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 120px;
+  font-family: "MEL";
 }
 
 .about_list > p {
   margin: 0;
+  font-size: 22px;
+}
+
+.about_list__pl {
+  margin-left: 83px;
+}
+
+.about_list__pl > p {
   font-size: 26px;
 }
 
@@ -1429,6 +1461,7 @@ header {
 .ru-gallery {
   font-family: "BR";
   font-size: 52px;
+  margin-top: 0px;
 }
 
 .active-slider {
@@ -1458,7 +1491,7 @@ header {
   }
   .cask-left {
     width: 412px;
-    top: 1631px;
+    top: calc(267%);
   }
 }
 
@@ -1502,6 +1535,9 @@ header {
 }
 
 @media (max-width: 1280px) {
+  .cask-left {
+    top: calc(280%);
+  }
   .logo {
     width: 150px;
     height: 150px;
@@ -1664,7 +1700,11 @@ header {
     left: 65px;
   }
   .footer-about {
-    padding: 0 25px;
+    min-height: 329px;
+    padding: 13px 25px;
+  }
+  .footer-about-info > div {
+    margin: 25px 0;
   }
   .bg_text-2 {
     left: 134px;
@@ -1826,6 +1866,9 @@ header {
 }
 
 @media (max-width: 870px) {
+  .cask-left {
+    top: calc(247%);
+  }
   .cask {
     top: 548px;
     left: 27px;
@@ -1915,7 +1958,7 @@ header {
   }
   .footer-about-info {
     font-size: 20px;
-    width: 84%;
+    width: 89%;
   }
 }
 
@@ -1931,11 +1974,9 @@ header {
     left: 14px;
     font-size: 34px;
   }
-  .footer-about-info {
-    font-size: 17px;
-  }
   .copyrights {
-    font-size: 12px;
+    font-size: 15px;
+    text-align: center;
   }
   .copyrights > a {
     font-size: 21px;
@@ -1954,15 +1995,15 @@ header {
   .about {
     width: 500px;
     height: auto;
-    padding: 39px 0;
+    padding: 64px 0;
   }
   .about-logo {
     top: 34px;
-    left: 5px;
+    left: 28px;
   }
   .shine-logo {
     top: 35px;
-    left: 5px;
+    left: 28px;
   }
   .more {
     bottom: -89px;
@@ -1982,6 +2023,20 @@ header {
   }
   .info-about {
     margin-left: 33%;
+  }
+  .about_list {
+    margin-left: 53px;
+    font-family: "MEL";
+  }
+  .about_list > p {
+    margin: 0;
+    font-size: 18px;
+  }
+  .about_list__pl {
+    margin-left: 38px;
+  }
+  .about_list__pl > p {
+    font-size: 21px;
   }
 }
 
@@ -2035,9 +2090,11 @@ header {
   .content-promotion {
     width: 85%;
   }
+  .footer-about {
+    padding: 25px 25px;
+  }
   .footer-about-info {
     width: 94%;
-    font-size: 15px;
   }
 }
 
@@ -2086,6 +2143,17 @@ header {
   }
   .address_span {
     display: contents;
+  }
+  .about_list {
+    margin-left: 9px;
+    margin-bottom: 48px;
+  }
+  .about_list__pl {
+    margin-left: 6px;
+    margin-bottom: 33px;
+  }
+  .about_list__pl > p {
+    font-size: 22px;
   }
 }
 
@@ -2191,15 +2259,31 @@ header {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .about_list__rus > p {
-    font-size: 23px;
+  .about_list {
+    margin-bottom: 4px;
+  }
+  .about_list__pl {
+    margin-left: 0;
+    margin-bottom: 0;
   }
   .lng_opt-about {
     margin-top: 0;
   }
+  .copyrights {
+    padding: 5px 12px;
+  }
+  .copyrights-box {
+    text-align: center;
+  }
+  .footer-about-info {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 400px) {
+  .info-text {
+    width: 55%;
+  }
   .phone {
     width: 108%;
     margin-left: -18px;
@@ -2251,10 +2335,7 @@ header {
     margin-bottom: 56px;
   }
   .copyrights {
-    padding: 5px 12px;
-  }
-  .copyrights-box {
-    text-align: center;
+    font-size: 12px;
   }
 }
 

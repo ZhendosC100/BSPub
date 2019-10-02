@@ -7,8 +7,7 @@
 
     .cask-left
         width: 412px
-        top: 1631px
-
+        top: calc(267%)
 // // --------------### MEDIA max-width: 1440px ###-------------------//
 
 // @media (max-width: 1440px)
@@ -65,6 +64,8 @@
 // // --------------### MEDIA max-width: 1280px ###-------------------//
 
 @media (max-width: 1280px)
+    .cask-left
+        top: calc(280%)
     .logo
         width: 150px   
         height: 150px
@@ -217,7 +218,10 @@
     .cask
         left: 65px
     .footer-about
-        padding: 0 25px
+        min-height: 329px
+        padding: 13px 25px
+        &-info > div
+            margin: 25px 0
     .bg_text-2
         left: 134px
     .copyrights-box
@@ -357,6 +361,8 @@
 // // --------------### MEDIA max-width: 870px ###-------------------//
 
 @media (max-width: 870px)
+    .cask-left
+        top: calc(247%)
     .cask
         top: 548px
         left: 27px
@@ -432,7 +438,7 @@
         font-size: 20px
     .footer-about-info
         font-size: 20px
-        width: 84%
+        width: 89%
 
 // // --------------### MEDIA max-width: 700px ###-------------------//
 
@@ -445,10 +451,11 @@
         top: 365px
         left: 14px
         font-size: 34px
-    .footer-about-info
-        font-size: 17px
+    // .footer-about-info
+    //     font-size: 17px
     .copyrights
-        font-size: 12px
+        font-size: 15px
+        text-align: center
         >a 
             font-size: 21px
         &-box
@@ -463,13 +470,15 @@
     .about
         width: 500px
         height: auto
-        padding: 39px 0
+        padding: 64px 0
         &-logo
             top: 34px
-            left: 5px
+            // left: 5px
+            left: 28px
     .shine-logo
         top: 35px
-        left: 5px
+        // left: 5px
+        left: 28px
     .more
         bottom: -89px
         right: 14px
@@ -484,6 +493,17 @@
             height: 25px
     .info-about
         margin-left: 33% 
+    
+    .about_list
+        margin-left: 53px
+        font-family: "MEL"
+        > p
+            margin: 0
+            font-size: 18px
+        &__pl
+            margin-left: 38px
+            > p
+                font-size: 21px
     
 
 // // --------------### MEDIA max-width: 680px ###-------------------//
@@ -525,9 +545,10 @@
         margin-left: 25%
     .content-promotion
         width: 85%
-    .footer-about-info
-        width: 94%
-        font-size: 15px
+    .footer-about
+        padding: 25px 25px
+        &-info
+            width: 94%
 
 // // --------------### MEDIA max-width: 576px ###-------------------//
 
@@ -567,6 +588,15 @@
         right: 19px
     .address_span
         display: contents
+
+    .about_list
+        margin-left: 9px
+        margin-bottom: 48px
+        &__pl
+            margin-left: 6px
+            margin-bottom: 33px
+            > p
+                font-size: 22px
 
 // // --------------### MEDIA max-width: 520px ###-------------------//
 
@@ -651,14 +681,26 @@
         font-size: 16px
     .about
         justify-content: space-around
-        &_list__rus > p
-            font-size: 23px
+        &_list
+            margin-bottom: 4px
+            &__pl
+                margin-left: 0
+                margin-bottom: 0
     .lng_opt-about
         margin-top: 0
+    .copyrights
+        padding: 5px 12px
+        &-box
+            text-align: center
+    .footer-about
+        &-info
+            font-size: 16px
         
 // // --------------### MEDIA max-width: 400px ###-------------------//
 
 @media (max-width: 400px)
+    .info-text
+        width: 55%
     .phone
         width: 108%
         margin-left: -18px
@@ -695,11 +737,8 @@
     .promotion-box
         margin-top: 75px
         margin-bottom: 56px
-
     .copyrights
-        padding: 5px 12px
-        &-box
-            text-align: center
+        font-size: 12px
     
 // // --------------### MEDIA max-width: 370px ###-------------------//
 

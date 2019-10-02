@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
   <meta charset="UTF-8">
   <meta author="Yauhen Tretsyak (Eugeniusz Trecjak)">
   <meta name="description" content="Pub Beer Station - najlepsze świeże piwo w Warszawie,  Pub w Warszawie, pub in the Warsaw, beer, piwo, greatest beer in the Warsaw, świeże piwa">
@@ -73,18 +74,20 @@
 
         <nav class="nav-lang rus-lang">
           <a href="#gallery_box" class="nav_text gallery_scroll ru">Галерея</a>
-          <a href="#promo_box" class="nav_text promo_scroll ru">Промоции</a>
+          <a href="#promo_box" class="nav_text promo_scroll ru">Наши акции</a>
           <p class="nav_text event ru">События</p>
           <a href="#about" class="nav_text about_us ru">О нас</a>
         </nav>
 
         <div class="info">
           <div class="ss_box">
-            <a class="link_ss" href="#" title="Facebook">
+            <a class="link_ss" href="https://www.facebook.com/Beer_Station_PL-102590877818066/" title="Facebook">
               <div class="burn_box">
                 <img class="img_icon" src="img/bung.png" alt="bung">
               </div>
               <img class="ss_img" src="img/icons/fb.svg" alt="facebook">
+              <!-- <img class="ss_img" src="img/icons/fb_none_border.svg" alt="facebook"> -->
+
               <!-- <div class="ss_mask"></div> -->
               <div class="shine-icon-ss"></div>
             </a>
@@ -93,6 +96,8 @@
                 <img class="img_icon" src="img/bung.png" alt="bung">
               </div>
               <img class="ss_img" src="img/icons/instagram.svg" alt="instagram">
+              <!-- <img class="ss_img" src="img/icons/instagram_none_border.svg" alt="instagram"> -->
+
               <!-- <div class="ss_mask"></div> -->
               <div class="shine-icon-ss"></div>
             </a>
@@ -101,6 +106,8 @@
                 <img class="img_icon" src="img/bung.png" alt="bung">
               </div>
               <img class="ss_img" src="img/icons/vk.svg" alt="VK">
+              <!-- <img class="ss_img" src="img/icons/vk_none_border.svg" alt="VK"> -->
+
               <!-- <div class="ss_mask"></div> -->
               <div class="shine-icon-ss"></div>
             </a>
@@ -117,7 +124,9 @@
             <div class="lang_icon rus-icon">
               <img class="img_icon icon" src="img/bung.png" alt="bung">
               <p class="icon_text" title="Русский">Ru</p>
-              <div class="shine-icon"></div>
+              <!-- <div class="shine-icon" onclick="ym(55491910, 'reachGoal', 'lang_rus'); return true;"></div> -->
+              <div class="shine-icon" onclick="ym(55491910, 'reachGoal', 'lang_rus'); return true;"></div>
+
             </div>
           </div>
 
@@ -127,8 +136,8 @@
             <p class="address active">Adres: <span class="address_span">Warszawa, ul. Kępna, 15</span></p>
             <p class="address">Адрес: <span class="address_span">Warszawa, ul. Kępna, 15</span></p>
           </a>
-            <a class="phone active tel" href="tel:+48123456789">Telefon: +<u>48 123 456 789</u></a>
-            <a class="phone tel tel_rus" href="tel:+48123456789">Телефон: +<u>48 123 456 789</u></a>
+            <a class="phone active tel" href="tel:+48508545956">Telefon: +<u>48 508 545 956</u></a>
+            <a class="phone tel tel_rus" href="tel:+48508545956">Телефон: +<u>48 508 545 956</u></a>
           </div>
         </div>
       </div>
@@ -144,7 +153,7 @@
     <p class="lng_opt-open lng_opt-open_rus">Открыты:</p>
 
     <div class="time active">
-      <p class="open_time">pn-pt 10:00 - 23:00</p>
+      <p class="open_time">pn-pt 13:00 - 23:00</p>
       <p class="open_time">sb, nd 12:00 - 00:00</p>
     </div>
 
@@ -167,12 +176,21 @@
           <img src="img/left_arrow.png" alt="left" class="left_arrow" title="Previous">
         </div>
         <div class="slider">
-          <a href="img/img_slides/big_1_pr.jpg" class="slider-link" title="Click to zoom">
-            <img src="img/img_slides/min_1.jpg" alt="photo" class="slider-img">
+          <a href="img/img_slides/big/big_1_n.jpg" class="slider-link" title="Click to zoom">
+            <img src="img/img_slides/min/min_1.jpg" alt="photo" class="slider-img">
           </a>
-          <a href="img/img_slides/big_2.jpg" class="slider-link" title="Click to zoom">
-            <img src="img/img_slides/min_2.jpg" alt="photo" class="slider-img">
+          <a href="img/img_slides/big/big_2_n.jpg" class="slider-link" title="Click to zoom">
+            <img src="img/img_slides/min/min_2.jpg" alt="photo" class="slider-img">
           </a>
+          <a href="img/img_slides/big/big_3_n.jpg" class="slider-link" title="Click to zoom">
+            <img src="img/img_slides/min/min_3.jpg" alt="photo" class="slider-img">
+          </a>
+          <a href="img/img_slides/big/big_4_n.jpg" class="slider-link" title="Click to zoom">
+            <img src="img/img_slides/min/min_4.jpg" alt="photo" class="slider-img">
+          </a>
+          <!-- <a href="img/img_slides/big/big_5_n.jpg" class="slider-link" title="Click to zoom">
+            <img src="img/img_slides/min/min_5.jpg" alt="photo" class="slider-img">
+          </a> -->
         </div>
         <div class="right_box">
           <img src="img/right_arrow.png" alt="right" class="right_arrow" title="Next">
@@ -185,20 +203,39 @@
   <div class="promotion-box">
     <div class="promotion" id="promo_box">
       <p class="lng_opt-promotion active">Promocje</p>
-      <p class="lng_opt-promotion ru-gallery">Промоции</p>
+      <p class="lng_opt-promotion ru-gallery">Наши акции  </p>
       <p class="promo-volume">0, 568 L</p>
       <div class="content-promotion">
-        <p class="promo_info active">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ex harum ducimus 
-          architecto molestiae saepe dicta, fugit enim possimus quibusdam nisi dolore hic 
-          asperiores! Enim quas optio molestias dignissimos quasi.
-        </p>
-
-        <p class="promo_info">
-            Это уже русский текст, все работает хорошо. adipisicing elit. Eos ex harum ducimus 
-            architecto molestiae saepe dicta, fugit enim possimus quibusdam nisi dolore hic 
-            asperiores! Enim quas optio molestias dignissimos quasi.
+        <div class="promo_info active">
+         <div>
+          <p> W dzień otwarcia każdy Klient będzie miał możliwość degustacji piwa.
+            Dla chętnych czeka też karta Stałego Klienta, która uprawia do zniżek w naszym
+            lokalu i inn. gratisów :)</p>
+            <p>Zapraszamy wszystkich chętnych aby w tym uroczystym dla nas dniu mogli miło spędzić
+              czas w gronie znajomych w miłej atmosfierze zapewnionej przez zespół Beer Station.</p>
+            <p>Informacja o dniu otwarcia będzie podana na stornie, w instagramie i na facebooku.
+              Proszę śledzić informację na bieżąco.</p>
+            <p>
+              <i>Pozdrawiamy, zespół <b>Beer Station</b>.</i>
           </p>
+         </div>
+        </div>
+
+        <div class="promo_info">
+          <div>
+            <p> В день открытия каждый посетитель будет иметь возможность продегустировать 
+              пиво. Также у каждого посетителя будет возможность получить Карту Постоянного
+              Клиента, дающая право на скидки и различные бонусы.
+            </p>
+              <p>Приглашаем всех в этот торжественный день провести отлично время в компании друзей
+                в уютной атмосфере, созданной командой Beer Station
+              </p>
+              <p>Информация о дате открытия будет на нашей странице, в instagram и на facebook.</p>
+              <p>
+                <i>С уважением, команда <b>Beer Station</b>.</i>
+            </p>
+           </div>
+          </div>
       </div>
       <p class="beer-multi">Piwo / Beer / Пиво / Пiво / Cerveza / Pivo / Beoir...</p>
     </div>
@@ -223,25 +260,33 @@
       <div class="footer-about">
           <p class="lng_opt-about active">O nas</p>
           <p class="lng_opt-about ru-gallery">О нас</p>
-          <p class="footer-about-info active">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-            Similique quod ullam magni accusantium. Et voluptates <br>
-            dolorum expedita esse incidunt velit? Quae excepturi <br>
-            hic nostrum sapiente alias eligendi molestias saepe <br>
-            explicabo cumque aliquid error, delectus ducimus <br>
-            quibusdam possimus cupiditate, quos modi autem <br>
-            voluptas? Ratione et porro enim ab, quaerat asperiores 
-          </p>
+          <div class="footer-about-info active">
+             <div>
+              <p>
+                Zespół Beer Station dołożył wszelkich starań, aby stworzyć 
+                wyjątkowe miejsce, w którym łączy się niepowtarzalny angielski 
+                styl małego pubu, przytulność i jakość świeżego piwa prosto z beczki.
+               </p>
+               <p>
+                BeerStation to mała wyspa stylu, transmisji sportowych i wspaniałego 
+                piwa w sercu starej Pragi w Warszawie.
+               </p>
+             </div>
+          </div>
 
-          <p class="footer-about-info">
-              Это русский текст и все работает отлично))))))))))))) <br>
-              Similique quod ullam magni accusantium. Et voluptates <br>
-              dolorum expedita esse incidunt velit? Quae excepturi <br>
-              hic nostrum sapiente alias eligendi molestias saepe <br>
-              explicabo cumque aliquid error, delectus ducimus <br>
-              quibusdam possimus cupiditate, quos modi autem <br>
-              voluptas? Ratione et porro enim ab, quaerat asperiores 
-          </p>
+          <div class="footer-about-info">
+            <div>
+              <p>
+                Команда BeerStation своими руками постаралась создать неповторимое место, 
+                где сочетаются неповторимый английский стиль маленького паба, домашний уют 
+                и качество свежего пива прямо из бочки.
+               </p>
+               <p>
+                BeerStation - маленький островок стиля, спортивных трансляций и замечательного 
+                пива в самом сердце старой Праги в Варшаве.
+               </p>
+             </div>
+          </div>
       </div>
     </div>
 
@@ -276,20 +321,12 @@
       <p id="seconds">--</p>s
     </div>
     <div class="event-promo">
-      <p class="event-info active">Lorem ipsum dolor sit amet 
-        consectetur adipisicing elit. Consequatur reiciendis 
-        debitis repellendus magni nostrum tempora voluptatum 
-        modi ex ipsa quas? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quasi blanditiis eum neque porro, 
-        quibusdam distinctio nam amet assumenda possimus necessitatibus 
-        rerum consectetur ea minus harum est, earum repellat, quisquam 
-        veniam dolores tempora dolorem enim. Nihil harum cupiditate, 
-        optio natus placeat iusto illo ab enim maxime minus et sint qui 
-        dolores architecto ullam alias repudiandae vel praesentium! 
+      <p class="event-info active">Wkrótce uruchomimy timera, który będzie wskazywał czas
+        do dnia otwarcia naszego pabu Beer Station :)) Oraz proszę śledzić za wydarzeniami 
+        w instagramie i na facebooku.
       </p>
-      <p class="event-info"> Рады сообщить, что это время, которое осталось до открыия
-        нашего паба Beer Station :)) Приглашаем Вас окунуться в приятную теплую атмосферу, попробовать 
-        пиво разных сортов и душевно пообщаться :) 
+      <p class="event-info"> В ближайшее время запустится таймер, показывающий время, которое осталось до открыия
+        нашего паба Beer Station :)) Также можете следить за событиями в instagram и на facebook.
       </p>
     </div>
   </aside>
@@ -305,32 +342,44 @@
     </div>
 
     <div class="info-about">
-      <div class="about_list active">
-          <p>- Text text text text text text text</p>
-          <p>- Text text text text text text text</p>
-          <p>- Text text text text text text text</p>
-          <p>- Text text text text text text text</p>
-          <p>- Text text text text text text text</p>
+      <div class="about_list about_list__pl active">
+          <p>- Zawsze świeże piwo</p>
+          <p>- Przyjemna atmosfera</p>
+          <p>- Transmisji sportowe</p>
+          <p>- Różne fajne promocje</p>
+          <p>- Dobre ceny</p>
       </div>
 
       <div class="about_list about_list__rus">
-        <p>- Текст текст текст текст текст текст</p>
-        <p>- Текст текст текст текст текст текст</p>
-        <p>- Текст текст текст текст текст текст</p>
-        <p>- Текст текст текст текст текст текст</p>
-        <p>- Текст текст текст текст текст текст</p>
+        <p>- Всегда свеежее пиво</p>
+        <p>- Приятная атмосфера</p>
+        <p>- Спортивные трансляции</p>
+        <p>- Различные акции</p>
+        <p>- Отличные цены</p>
     </div>
       
     </div>
     <p class="more active">Chcesz więcej informacji? 
-      <a href="tel:+48123456789"> Zadzwoń do nas: <span title="+48 123 456 789">123 456 789</span></a>
+      <a href="tel:+48508545956"> Zadzwoń do nas: <span title="+48 508 545 956">508 545 956</span></a>
     </p>
 
     <p class="more more_rus">Нужно больше информации?
-      <a href="tel:+48123456789"> Позвоните нам: <span title="+48 123 456 789">123 456 789</span></a>
+      <a href="tel:+48508545956"> Позвоните нам: <span title="+48 508 545 956">508 545 956</span></a>
     </p>
   </aside>
   <script src="./public/bundle.js"></script>
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(55491910, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55491910" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
+  <!-- /Yandex.Metrika counter -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLN9HPBD7C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MLN9HPBD7C');
+  </script>
+  <!-- End Global site tag (gtag.js) - Google Analytics -->
 </body>
 
 </html>

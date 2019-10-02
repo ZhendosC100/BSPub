@@ -387,7 +387,6 @@ function hideMenu(){
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return language; });
 function language(){
-    console.log("Lang OK");
 
     let selectLang = document.querySelectorAll('.lang_icon'),
         lang = document.querySelectorAll('.lng_opt-info'),
@@ -420,7 +419,9 @@ function language(){
     for(let i=0; i < selectLang.length; i++){
 
         let k=i;
-        selectLang[i].addEventListener('click', ()=>{
+        selectLang[i].addEventListener('click', (e)=>{
+            // let target = e.target;
+            // console.log(target);
             //---------#### Header ####--------------//
             // Selector of languages
             langNonActive(0, iconLang, 'active_select'); 
@@ -1029,7 +1030,8 @@ function slideZoom(){
                     k = document.documentElement.clientWidth * 0.72791318;
                     slideZoom('zoom_mobile');
                 } else {
-                    k = document.documentElement.clientWidth * 0.42791318;
+                    // k = document.documentElement.clientWidth * 0.42791318;
+                    k = document.documentElement.clientWidth * 0.351791318;
                     slideZoom('zoom');
                 }
                 

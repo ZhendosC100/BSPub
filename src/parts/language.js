@@ -1,5 +1,4 @@
 export default function language(){
-    console.log("Lang OK");
 
     let selectLang = document.querySelectorAll('.lang_icon'),
         lang = document.querySelectorAll('.lng_opt-info'),
@@ -32,7 +31,9 @@ export default function language(){
     for(let i=0; i < selectLang.length; i++){
 
         let k=i;
-        selectLang[i].addEventListener('click', ()=>{
+        selectLang[i].addEventListener('click', (e)=>{
+            // let target = e.target;
+            // console.log(target);
             //---------#### Header ####--------------//
             // Selector of languages
             langNonActive(0, iconLang, 'active_select'); 
