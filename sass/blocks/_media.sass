@@ -1,3 +1,11 @@
+// // --------------### MEDIA max-width: 1970px ###-------------------//
+
+@media (min-width: 1600px)
+
+    .cask-left
+        width: 412px
+        top: calc(161%)
+    
 // // --------------### MEDIA max-width: 1520px ###-------------------//
 
 @media (max-width: 1519px)
@@ -480,7 +488,7 @@
         // left: 5px
         left: 28px
     .more
-        bottom: -89px
+        bottom: -2px
         right: 14px
         transform: rotate(0deg)
     .close-events
@@ -560,7 +568,7 @@
         margin-left: 0
     .about
         width: 300px
-        padding: 76px 0
+        padding: 22px 0
         min-height: 461px
         justify-content: flex-end
         &-logo
@@ -572,16 +580,24 @@
         width: 130px
         height: 130px
     .more
-        bottom: -11px
+        bottom: 25px
         right: 13px
         color: #ff6224
         font-size: 20px
         >a
             font-size: 18px
         &_rus
-            bottom: 5px
+            bottom: 33px
             right: 9px
             font-size: 18px
+        &_e 
+            bottom: 24px
+            margin: 0
+            font-family: "MEL"
+            font-size: 13px
+            >span
+                font-size: 18px
+                padding-left: 2px
     
     .close-events
         top: 19px
@@ -635,11 +651,14 @@
         top: 190px
         left: auto
         right: 16%
-    .info-text
-        display: block
-        width: 50%
-        top: 90px
-        right: 6%
+    .info
+        &-text
+            display: block
+            width: 50%
+            top: 90px
+            right: 6%
+        &-about
+            margin-bottom: -242px
     .phone
         justify-content: flex-end
         margin-left: -16px

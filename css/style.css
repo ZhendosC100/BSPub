@@ -1441,6 +1441,21 @@ header {
           transform: rotate(-20deg);
 }
 
+.more_e {
+  display: none;
+  position: absolute;
+  bottom: -32px;
+  margin: 0;
+  font-family: "MEL";
+  font-size: 22px;
+}
+
+.more_e > span {
+  font-size: 24px;
+  padding-left: 8px;
+  color: #FFC107;
+}
+
 .more > a {
   font-family: "MEL";
   font-size: 22px;
@@ -1482,6 +1497,13 @@ header {
 
 .active_select {
   color: #f7fbb7;
+}
+
+@media (min-width: 1600px) {
+  .cask-left {
+    width: 412px;
+    top: calc(161%);
+  }
 }
 
 @media (max-width: 1519px) {
@@ -2006,7 +2028,7 @@ header {
     left: 28px;
   }
   .more {
-    bottom: -89px;
+    bottom: -2px;
     right: 14px;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -2107,7 +2129,7 @@ header {
   }
   .about {
     width: 300px;
-    padding: 76px 0;
+    padding: 22px 0;
     min-height: 461px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -2124,7 +2146,7 @@ header {
     height: 130px;
   }
   .more {
-    bottom: -11px;
+    bottom: 25px;
     right: 13px;
     color: #ff6224;
     font-size: 20px;
@@ -2133,9 +2155,19 @@ header {
     font-size: 18px;
   }
   .more_rus {
-    bottom: 5px;
+    bottom: 33px;
     right: 9px;
     font-size: 18px;
+  }
+  .more_e {
+    bottom: 24px;
+    margin: 0;
+    font-family: "MEL";
+    font-size: 13px;
+  }
+  .more_e > span {
+    font-size: 18px;
+    padding-left: 2px;
   }
   .close-events {
     top: 19px;
@@ -2200,6 +2232,9 @@ header {
     width: 50%;
     top: 90px;
     right: 6%;
+  }
+  .info-about {
+    margin-bottom: -242px;
   }
   .phone {
     -webkit-box-pack: end;

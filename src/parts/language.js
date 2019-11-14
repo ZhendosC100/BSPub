@@ -13,6 +13,7 @@ export default function language(){
         promoTextLang = document.querySelectorAll('.promo_info'),
         aboutList = document.querySelectorAll('.about_list'),
         more = document.querySelectorAll('.more'),
+        moreE = document.querySelectorAll('.more_e'),
         eventName = document.querySelectorAll('.event-name'),
         eventInfo = document.querySelectorAll('.event-info'),
         aboutFooter = document.querySelectorAll('.lng_opt-about'),
@@ -87,6 +88,9 @@ export default function language(){
             //Telephone about box
             langNonActive(0, more, 'active'); 
             langActive(k, more, 'active');
+
+            langNonActive(0, moreE, 'active'); 
+            langActive(k, moreE, 'active');
 
             //-------##### Footer #####--------------//
             //Title of Footer about
