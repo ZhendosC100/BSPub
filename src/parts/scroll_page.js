@@ -71,7 +71,7 @@ export default function scrollPage(){
                 
             });
         //------------- End of function show/hide "Up" --------------//
-        console.log(cWidth);
+        // console.log(cWidth);
 }
  
 

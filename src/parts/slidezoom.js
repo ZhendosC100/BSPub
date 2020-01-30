@@ -92,8 +92,10 @@ export default function slideZoom(){
                     k = document.documentElement.clientWidth * 0.72791318;
                     slideZoom('zoom_mobile');
                 } else {
-                    // k = document.documentElement.clientWidth * 0.42791318;
-                    k = document.documentElement.clientWidth * 0.351791318;
+                    k = document.documentElement.clientWidth * 0.42791318;
+                    // k = document.documentElement.clientWidth * 0.351791318;
+                    // k = document.documentElement.clientWidth * 0.251791318;
+
                     slideZoom('zoom');
                 }
             

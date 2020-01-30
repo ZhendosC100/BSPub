@@ -13,7 +13,7 @@ export default function timerEvent() {
             asideMask.style.display = 'flex';
 
 
-            let deadline = '2019-06-01T09:00:00',
+            let deadline = '2019-12-06T14:00:00',
                 getTimeRemaining = (endtime) => {
                     let t = Date.parse(endtime) - Date.parse(new Date()),
                         seconds = Math.floor((t / 1000) % 60),
@@ -76,7 +76,7 @@ export default function timerEvent() {
                 hours = Math.floor((t / 1000 / 60 / 60) % 24),
                 days = Math.floor((t / (1000 * 60 * 60 * 24)));
     
-            console.log(days);
+            // console.log(days);
     
         function stepNumber(start, stop, step, times) {
             setInterval(function () {

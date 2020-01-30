@@ -1020,6 +1020,10 @@ header {
   text-align: justify;
 }
 
+.promo_info > div > p > span {
+  color: #00ffec;
+}
+
 .promotion-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1604,7 +1608,7 @@ header {
     font-size: 50px;
   }
   .open_time {
-    font-size: 50px;
+    font-size: 46px;
   }
   .beer {
     top: -23px;
@@ -2060,6 +2064,9 @@ header {
   .about_list__pl > p {
     font-size: 21px;
   }
+  .open_time {
+    font-size: 34px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -2413,6 +2420,9 @@ header {
   }
   .lng_opt-section-name {
     margin: 0px 0px -32px 0px;
+  }
+  .open_time {
+    font-size: 26px;
   }
   .gold {
     top: 34px;
