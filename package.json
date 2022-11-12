@@ -20,6 +20,6 @@
   "homepage": "https://github.com/ZhendosC100/BSPub#readme",
   "devDependencies": {
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.12"
   }
 }
